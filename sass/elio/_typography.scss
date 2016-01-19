@@ -63,6 +63,24 @@ p {
 	@include vr-margin-bottom($p-vr-margin-bottom);
 }
 
+p, div, span, a, b, strong, i, em {
+	&.tiny {
+		font-size: rem(11);	
+	}
+
+	&.small {
+		font-size: rem(12);	
+	}
+
+	&.large {
+		font-size: rem(16);	
+	}
+
+	&.huge {
+		font-size: rem(18);	
+	}
+}
+
 .lowercase {
 	text-transform: lowercase;
 }

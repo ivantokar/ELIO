@@ -2743,6 +2743,26 @@ p {
   line-height: 1.71429;
   margin-bottom: 1.5rem; }
 
+p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny {
+  font-size: 0.6875rem; }
+
+p.small, p.form-caption-over,
+p.form-caption-under, div.small, div.form-caption-over,
+div.form-caption-under, span.small, span.form-caption-over,
+span.form-caption-under, a.small, a.form-caption-over,
+a.form-caption-under, b.small, b.form-caption-over,
+b.form-caption-under, strong.small, strong.form-caption-over,
+strong.form-caption-under, i.small, i.form-caption-over,
+i.form-caption-under, em.small, em.form-caption-over,
+em.form-caption-under {
+  font-size: 0.75rem; }
+
+p.large, div.large, span.large, a.large, b.large, strong.large, i.large, em.large {
+  font-size: 1rem; }
+
+p.huge, div.huge, span.huge, a.huge, b.huge, strong.huge, i.huge, em.huge {
+  font-size: 1.125rem; }
+
 .lowercase {
   text-transform: lowercase; }
 
