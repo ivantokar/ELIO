@@ -1,0 +1,21 @@
+{
+  "name": "elio",
+  "description": "SASS/CSS Framework",
+  "main": "",
+  "authors": [
+    "Ivan Tokar <ivan.yu.tokar@yandex.ru>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}

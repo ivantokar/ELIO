@@ -1,0 +1,89 @@
+.button, a.button {
+	@extend .inline-block;
+	@extend .text-center;
+	@include box-shadow($buttons-box-shadow);
+	@include transition($buttons-transition);
+	@include border-radius($buttons-border-radius);
+	
+	font-family: $default-button-font-family;
+	font-size: rem($default-button-font-size);
+	line-height: rem($default-button-height);
+	padding: $default-button-paddings;
+	height: rem($default-button-height);
+	margin-bottom: 0;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	background-color: $default-button-background;
+	color: $default-button-text-color;
+	white-space: nowrap;
+	text-decoration: none;
+	border: $default-button-border;
+	outline: none;
+
+	&:hover,
+	&:focus,
+	&.hover {
+		@include box-shadow($buttons-box-shadow-hover);
+
+		background-color: $default-button-background-hover;
+		color: $default-button-text-color-hover;
+	}
+
+	&:active,
+	&.active {
+		@include box-shadow($buttons-box-shadow-active);
+	}
+
+	&.disabled,
+	&.disabled:hover,
+	&.disabled:focus,
+	&[disabled],
+	&[disabled]:hover,
+	&[disabled]:focus {
+		@include box-shadow(none);
+		@include opacity(.7);
+
+		color: $buttons-disable-text-color;
+		background: $buttons-disable-background;
+		cursor: not-allowed;
+	}
+
+	&.expand {
+		width: 100%;
+	}
+
+	span {
+		padding-#{from()}: 7px;
+	}
+
+	&.ltr {
+		span {
+			padding-#{from()}: 0;
+			padding-#{to()}: 7px;
+		}
+	}
+	
+	.fa {
+		font-size: rem(14);
+		line-height: rem($default-button-height);
+	}
+
+	&.icon-only {
+		width: 40px;
+
+		+.icon-only {
+			margin-#{from()}: 5px;
+		}
+	}
+	
+	// sizes
+	@include button-size('tiny', $tiny-button-height, $tiny-button-paddings, $tiny-button-font-size);
+	@include button-size('small', $small-button-height, $small-button-paddings, $small-button-font-size);
+	@include button-size('large', $large-button-height, $large-button-paddings, $large-button-font-size);
+	@include button-size('huge', $huge-button-height, $huge-button-paddings, $huge-button-font-size);
+	// colors
+	@include button-color('blue', $blue-button-text-color, $blue-button-background, $blue-button-text-color-hover, $blue-button-background-hover);
+	@include button-color('green', $green-button-text-color, $green-button-background);
+	@include button-color('red', $red-button-text-color, $red-button-background);
+}

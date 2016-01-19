@@ -1,0 +1,27 @@
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	direction: $base-direction !important;
+
+	@if $base-direction == rtl {
+		margin-right: 0.5px; // хак для IE
+	}
+}
+
+body {
+	@include vr;
+	
+	font-style: $base-font-style;
+	font-family: $base-font-family;
+	font-size: rem($base-font-size);
+	color: $base-text-color;
+	background: $base-background;
+	text-align: from();
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}

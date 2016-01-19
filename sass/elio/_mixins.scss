@@ -1,0 +1,430 @@
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin font-face($name, $path, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		src: $src;
+	}
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin hyphenation {
+	-ms-word-break: break-all;
+		word-break: break-all;
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+			hyphens: auto;	
+}
+
+@mixin vr($font-size: $base-font-size, $line-height: 1) {
+	font-size: $font-size * 1px;
+	font-size: rem($font-size);
+	line-height: ceil($font-size / ($base-line-height * $line-height)) * (($base-line-height * $line-height) / $font-size);
+}
+
+@mixin vr-margin-bottom($step: 1) {
+	margin-bottom: rem($base-line-height * $step);
+}
+
+@mixin aligment($parent) {
+	.center-#{$parent} {
+		float: none !important;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.left-#{$parent} {
+		float: from() !important;
+	}
+
+	.right-#{$parent} {
+		float: to() !important;
+	}
+}
+
+@mixin text-aligment($parent) {
+	.text-center-#{$parent} {
+		text-align: center !important;
+	}
+
+	.text-left-#{$parent} {
+		text-align: from() !important;
+	}
+
+	.text-right-#{$parent} {
+		text-align: to() !important;
+	}
+
+	.text-justify-#{$parent} {
+		text-align: justify !important;
+	}
+}
+
+@mixin visibility($parent) {
+	.show-#{$parent} {
+		display: block !important;
+	}
+
+	.hide-#{$parent} {
+		display: none !important;
+	}
+}
+
+@mixin box-sizing($box-model) {
+	-webkit-box-sizing: $box-model;
+	-moz-box-sizing: $box-model;
+	box-sizing: $box-model;
+}
+
+@mixin border-radius($radius, $type: 0) {
+	@if $type == '%' {
+		-webkit-border-radius: #{$radius}%;
+		border-radius: #{$radius}%;
+	} @else {
+		-webkit-border-radius: rem($radius);
+		border-radius: rem($radius);
+	}
+	background-clip: padding-box;
+}
+
+@mixin border-top-radius($radius) {
+	-webkit-border-top-#{to()}-radius: rem($radius);
+	border-top-#{to()}-radius: rem($radius);
+	-webkit-border-top-#{from()}-radius: rem($radius);
+	border-top-#{from()}-radius: rem($radius);
+	background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+	-webkit-border-bottom-#{to()}-radius: rem($radius);
+	border-bottom-#{to()}-radius: rem($radius);
+	-webkit-border-top-#{to()}-radius: rem($radius);
+	border-top-#{to()}-radius: rem($radius);
+	background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+	-webkit-border-bottom-#{to()}-radius: rem($radius);
+	border-bottom-#{to()}-radius: rem($radius);
+	-webkit-border-bottom-#{from()}-radius: rem($radius);
+	border-bottom-#{from()}-radius: rem($radius);
+	background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+	-webkit-border-bottom-#{from()}-radius: rem($radius);
+	border-bottom-#{from()}-radius: rem($radius);
+	-webkit-border-top-#{from()}-radius: rem($radius);
+	border-top-#{from()}-radius: rem($radius);
+	background-clip: padding-box;
+}
+
+@mixin transition($arguments: all 0.2s ease) {
+	-webkit-transition: $arguments;
+	-moz-transition: $arguments;
+	-ms-transition: $arguments;
+	-o-transition: $arguments;
+	transition: $arguments;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter: alpha(opacity=($opacity * 100));
+}
+
+@mixin box-shadow($arguments) {
+	-webkit-box-shadow: $arguments;
+	-moz-box-shadow: $arguments;
+	box-shadow: $arguments;
+}
+
+// GRID
+// above
+@mixin mobile-large {
+	@media (min-width: $mobile-large) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin screen-small {
+	@media (min-width: $screen-small) {
+		@content;
+	}
+}
+
+@mixin screen-large {
+	@media (min-width: $screen-large) {
+		@content;
+	}
+}
+
+// below
+@mixin mobile-small-below {
+	@media (max-width: ($mobile-large - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin mobile-large-below {
+	@media (max-width: ($tablet - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin tablet-below {
+	@media (max-width: ($screen-small - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin screen-small-below {
+	@media (max-width: ($screen-large - 0.063rem)) {
+		@content;
+	}
+}
+
+// only
+@mixin mobile-large-only {
+	@media (min-width: $mobile-large) and (max-width: ($tablet - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin tablet-only {
+	@media (min-width: $tablet) and (max-width: ($screen-small - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin screen-small-only {
+	@media (min-width: $screen-small) and (max-width: ($screen-large - 0.063rem)) {
+		@content;
+	}
+}
+
+@mixin grid($screen: 'mobile-small', $cols: $columns) {
+	$i: $cols;
+	@while $i > 0 {
+		.#{$screen}-#{$i} {
+			float: from();
+			width: $i * (100% / $cols);
+		}
+		$i: $i - 1;
+	}
+}
+
+@mixin pull($screen: 'mobile-small', $cols: $columns) {
+	.#{$screen}-pull-0 {
+		#{to()}: auto;
+	}
+	$i: $cols;
+	@while $i > 0 {
+		.#{$screen}-pull-#{$i} {
+			#{to()}: $i * (100% / $cols);
+		}
+		$i: $i - 1;
+	}
+}
+
+@mixin push($screen: 'mobile-small', $cols: $columns) {
+	.#{$screen}-push-0 {
+		#{from()}: auto;
+	}
+	$i: $cols;
+	@while $i > 0 {
+		.#{$screen}-push-#{$i} {
+			#{from()}: $i * (100% / $cols);
+		}
+		$i: $i - 1;
+	}
+}
+
+@mixin offset($screen: 'mobile-small', $cols: $columns) {
+	.#{$screen}-offset-0 {
+		margin-#{from()}: 0;
+	}
+	$i: $cols;
+	@while $i > 0 {
+		.#{$screen}-offset-#{$i} {
+			margin-#{from()}: $i * (100% / $cols);
+		}
+		$i: $i - 1;
+	}
+}
+
+@mixin glue($parent:'') {
+	@if ($parent != '') {
+		.glue-#{$parent} {
+			padding: 0;
+
+			> .col {
+				padding: 0;
+
+				> .row {
+					margin: 0;
+				}
+			}
+		}
+
+	} @else {
+		.glue {
+			padding: 0;
+
+			> .col {
+				padding: 0;
+
+				> .row {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@mixin fixed($screen: 'mobile-small', $cols: $columns) {
+	$i: $cols;
+	@while $i > 0 {
+		.#{$screen}-#{$i} {
+			@for $j from 1 through $i {
+				.#{$screen}-#{$j} {
+					width: $j * (100% / $i);
+				}
+
+				.#{$screen}-pull-#{$j} {
+					#{from()}: $j * (100% / $i);
+				}
+
+				.#{$screen}-push-#{$j} {
+					#{from()}: $j * (100% / $i);
+				}
+
+				.#{$screen}-offset-#{$j} {
+					margin-#{from()}: $j * (100% / $i);
+				}
+			}			
+		}
+		$i: $i - 1;
+	}
+}
+// FORMS
+@mixin input-color($parent, $background, $border-color, $text-color) {
+	@if ($parent != noparent) {	
+		&.#{$parent} {
+			border-color: $border-color;
+			background: $background;
+			color: $text-color;
+		}
+
+	} @else {
+		border-color: $border-color;
+		background: $background;
+		color: $text-color;
+	}
+}
+
+@mixin input-size($parent, $height, $paddings, $font-size) {
+	&.#{$parent} {
+		font-size: rem($font-size);
+		height: $height;
+		padding: $paddings;
+	}
+}
+
+// @mixin input-placeholder($color) {
+// 	&::-webkit-input-placeholder {
+// 		color: $color;
+// 		@include ellipsis;
+// 	}
+// 	&::-moz-placeholder {
+// 		color: $color;
+// 		@include ellipsis;
+// 	}
+// 	&:-moz-placeholder {
+// 		color: $color;
+// 		@include ellipsis;
+// 	}
+// 	&:-ms-input-placeholder {
+// 		color: $color;
+// 		@include ellipsis;
+// 	}
+// }
+// @mixin placeholder {
+//   &::-moz-placeholder { @content; }
+//   &::-webkit-input-placeholder { @content; }
+//   &:-ms-input-placeholder { @content; }
+// }
+
+// BUTTONS
+@mixin button-size($parent, $height, $paddings, $font-size) {
+	&.#{$parent} {
+		font-size: rem($font-size);
+		line-height: rem($height - 2);
+		padding: $paddings;
+		height: #{$height}px;
+		height: rem($height);
+		vertical-align: top;
+
+		.fa {
+			font-size: rem(14);
+			line-height: rem($height);
+		}
+	}
+}
+
+@mixin button-color($parent, $text-color, $background, $text-color-hover: $text-color, $background-hover: 0) {
+	&.#{$parent} {
+		color: $text-color;
+		background: $background;
+
+		&:hover,
+		&:focus,
+		&.hover {
+			background: $background-hover;
+			color: $text-color-hover;
+		}
+
+		&:active,
+		&.active {
+			@include box-shadow(inset $buttons-box-shadow-hover);
+		}
+	}
+}

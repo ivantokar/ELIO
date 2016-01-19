@@ -1,0 +1,122 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+	@include border-radius($input-border-radius);
+	@include box-shadow($input-box-shadow);
+	@include transition($input-transition);
+
+	width: 100%;
+	font-size: rem($input-font-size);
+	font-family: $input-font-family;
+	height: $input-height;
+	border: $input-border;
+	color: $input-text-color;
+	padding: $input-paddings;
+	background: $input-background;
+
+	&:hover {
+		border-color: $input-border-hover;
+	}
+
+	&:focus {
+		border-color: $input-border-focus;
+		background: $input-background-focus;
+
+		@include box-shadow($input-box-shadow-focus);
+	}
+	
+	&.disabled,
+	&.disabled:hover,
+	&.disabled:focus,
+	&[disabled],
+	&[disabled]:hover,
+	&[disabled]:focus, {
+		@include box-shadow(none);
+		@include opacity(.65);
+
+		border-color: $input-disable-border-color;
+		background: $input-disable-background;
+		cursor: not-allowed;
+	}
+	
+	//@mixin placeholder {
+	&::-moz-placeholder {
+		color: color(grey, 900);
+		opacity: 1;
+	}
+	&::-webkit-input-placeholder {
+		color: color(grey, 900);
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: color(grey, 900);
+		opacity: 1;
+	}		
+
+	@include input-size('tiny', $tiny-input-height, $tiny-input-paddings, $tiny-input-font-size);
+	@include input-size('small', $small-input-height, $small-input-paddings, $small-input-font-size);
+	@include input-size('large', $large-input-height, $large-input-paddings, $large-input-font-size);
+	@include input-size('huge', $huge-input-height, $huge-input-paddings, $huge-input-font-size);
+	
+	@include input-color('error', $input-error-background, $input-error-border-color, $input-error-text-color);
+}
+
+textarea {
+	@extend .block;
+	
+	height: auto;
+	resize: none;
+}
+
+label {
+	@extend .block;
+	font-family: $label-font-family;
+	font-size: rem($label-font-size);
+	max-width: 100%;
+	padding: $label-paddings;
+	cursor: pointer;
+}
+
+.switch {
+	@extend .inline-block;
+
+	margin-#{to()}: $gaps * 2;
+	
+	input {
+		margin-#{to()}: $gaps;	
+	}
+
+	label {
+		font-size: rem(14);
+		line-height: rem(18);
+		color: color(grey, 800);
+	}
+}
+
+.form-caption-over,
+.form-caption-under {
+	@extend .block;
+	@extend .small;
+	@extend .light;
+
+	.fa {
+		font-size: rem(14);
+	}
+}
+
+.form-caption-over {
+	margin-bottom: 0.188rem;
+}
+
+.form-caption-under {
+	margin-top: 0.188rem;
+}
+
+.form-static {
+	@extend .block;
+	@extend .light;
+
+	padding-top: 6px;
+}

@@ -1,0 +1,186 @@
+@import 'elio/global';
+@import 'elio/functions';
+@import 'elio/mixins';
+
+// BASE
+$base-direction:						ltr;
+$base-background:						none;
+$base-text-color:						color(grey, 900);
+$base-font-style:						normal;		
+$base-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;		
+$base-font-size:						14; // px
+$base-line-height:						24; // px
+$base-border-radius:					2; // px
+$base-block-border:						rem(1) solid color(grey);
+$base-block-background:					color(grey, 100);
+// GRID
+$columns: 								12;
+$gaps:									rem(10);
+// brakepoints
+$mobile-small:							rem(320);
+$mobile-large:							rem(480);
+$tablet:								rem(768);
+$screen-small:							rem(1024);
+$screen-large:							rem(1280);
+// container width
+$tablet-container-width:				rem(740);
+$screen-small-container-width:			rem(980);
+$screen-large-container-width:			rem(1170);
+
+// TYPOGRAPHY
+// headers
+$h1-font-size:							48;
+$h1-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+$h1-font-style:							normal;
+$h1-font-weight:						normal;
+$h1-text-color:							color(grey, 800);
+$h1-vr-line-height:						3; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h1-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+
+$h2-font-size:							40;
+$h2-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+$h2-font-style:							normal;
+$h2-font-weight:						normal;
+$h2-text-color:							color(grey, 800);
+$h2-vr-line-height:						3; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h2-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+
+$h3-font-size:							31;
+$h3-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+$h3-font-style:							normal;
+$h3-font-weight:						normal;
+$h3-text-color:							color(grey, 800);
+$h3-vr-line-height:						1; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h3-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+
+$h4-font-size:							25;
+$h4-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+$h4-font-style:							normal;
+$h4-font-weight:						normal;
+$h4-text-color:							color(grey, 800);
+$h4-vr-line-height:						1; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h4-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+
+$h5-font-size:							20;
+$h5-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$h5-font-style:							normal;
+$h5-font-weight:						normal;
+$h5-text-color:							color(grey, 800);
+$h5-vr-line-height:						1; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h5-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+
+$h6-font-size:							16;
+$h6-font-family:						Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;	
+$h6-font-style:							normal;
+$h6-font-weight:						bold;
+$h6-text-color:							color(grey, 800);
+$h6-vr-line-height:						1; // сколько линий вертикального ритма будет занимать строчка текста, минимум зависит от размера текста 
+$h6-vr-margin-bottom:					1; // сколько линий вертикального ритма отолкнуть снизу  
+// параграф
+$p-font-size:							$base-font-size;
+$p-vr-margin-bottom:					1;
+
+// FORMS
+$input-font-family:							Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$input-font-size:							13;
+$input-border-radius:						0;
+$input-transition:							all 0.2s ease;
+$input-height:								34;
+$input-text-color:							color(grey, 900);
+$input-paddings:							rem(6) rem(10);
+$input-border:								1px solid color(grey, 400);
+$input-border-hover:						color(grey, 500);
+$input-border-focus:						color(grey, 600);
+$input-box-shadow:							inset 0 1px 2px rgba(color(black), .1);
+$input-box-shadow-focus:					0 0 5px rgba(color(grey, 600), .3);
+$input-background:							color(grey, 50);
+$input-background-focus:					color(white);
+$input-disable-border-color:				color(grey, 300);
+$input-disable-background:					color(grey, 100);
+$input-placeholder-color:					color(grey);
+// INPUTS SIZES
+// tiny input
+$tiny-input-height:							24;
+$tiny-input-paddings:						rem(3) rem(7);
+$tiny-input-font-size:						12;
+// small input
+$small-input-height:						28;
+$small-input-paddings:						rem(3) rem(7);
+$small-input-font-size:						13;
+// large input
+$large-input-height:						40;
+$large-input-paddings:						rem(9) rem(10);
+$large-input-font-size:						16;
+// extra large input
+$huge-input-height:							44;
+$huge-input-paddings:						rem(9) rem(10);
+$huge-input-font-size:						18;
+// INPUTS STATUS
+$input-error-background:					color(red, 50);
+$input-error-border-color:					color(red) !important;
+$input-error-text-color:					color(red);
+// form labels
+$label-font-family:							Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$label-font-size:							14;
+$label-paddings:							rem(5) 0;
+
+// BUTTONS
+$buttons-transition:						all 0.2s ease;
+$buttons-box-shadow:						none;
+$buttons-border-radius:						6;
+$buttons-box-shadow-hover:					0 1px 2px rgba(color(black), .3);
+$buttons-box-shadow-active:					inset 0 1px 2px rgba(color(black), .3);
+// button disable
+$buttons-disable-text-color:				color(grey);
+$buttons-disable-background:				color(grey, 300);
+// default button
+$default-button-font-family:				Calibri, Candara,Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$default-button-font-size:					13;
+$default-button-text-color:					color(grey, 900);	
+$default-button-text-color-hover:			color(black);
+$default-button-background:					color(grey, 300);	
+$default-button-background-hover:			darken($default-button-background, 5);
+$default-button-height:						34;
+$default-button-border:						0 none;
+$default-button-paddings:					0 rem(20);	
+// button extra small
+$tiny-button-height:						24;
+$tiny-button-paddings:						0 rem(10);
+$tiny-button-font-size:						11;
+// button small
+$small-button-height:						28;
+$small-button-paddings:						0 rem(20);
+$small-button-font-size:					12;
+// button large
+$large-button-height:						40;
+$large-button-paddings:						0 rem(20);
+$large-button-font-size:					16;
+// button extra large
+$huge-button-height:						44;
+$huge-button-paddings:						0 rem(20);
+$huge-button-font-size:						18;
+// BUTTON COLORS
+// blue button
+$blue-button-text-color:					color(blue, 50);
+$blue-button-background:					color(blue);
+$blue-button-text-color-hover:				color(white);
+$blue-button-background-hover:				color(blue, 600);
+// green button
+$green-button-text-color:					color(green, 50);
+$green-button-background:					color(green);
+$green-button-text-color-hover:				color(white);
+$green-button-background-hover:				color(green, 600);
+// red button
+$red-button-text-color:						color(red, 50);
+$red-button-background:						color(red);
+$red-button-text-color-hover:				color(white);
+$red-button-background-hover:				color(red, 600);
+
+// simply comment those elements that do not need to be compiled
+@import 'elio/reset';
+@import 'elio/base';
+@import 'elio/grid';
+@import 'elio/typography';
+@import 'elio/forms';
+@import 'elio/buttons';
+@import 'elio/utilities';

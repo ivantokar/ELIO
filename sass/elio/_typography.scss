@@ -1,0 +1,156 @@
+h1 {
+	@include vr($h1-font-size, $h1-vr-line-height);
+	@include vr-margin-bottom($h1-vr-margin-bottom);
+
+	font-style: $h1-font-style;
+	font-weight: $h1-font-weight;
+	font-family: $h1-font-family;
+	color: $h1-text-color;
+}
+
+h2 {
+	@include vr($h2-font-size, $h2-vr-line-height);
+	@include vr-margin-bottom($h2-vr-margin-bottom);
+
+	font-style: $h2-font-style;
+	font-weight: $h2-font-weight;
+	font-family: $h2-font-family;
+	color: $h2-text-color;
+}
+
+h3 {
+	@include vr($h3-font-size, $h3-vr-line-height);
+	@include vr-margin-bottom($h3-vr-margin-bottom);
+
+	font-style: $h3-font-style;
+	font-weight: $h3-font-weight;
+	font-family: $h3-font-family;
+	color: $h3-text-color;
+}
+
+h4 {
+	@include vr($h4-font-size, $h4-vr-line-height);
+	@include vr-margin-bottom($h4-vr-margin-bottom);
+
+	font-style: $h4-font-style;
+	font-weight: $h4-font-weight;
+	font-family: $h4-font-family;
+	color: $h4-text-color;
+}
+
+h5 {
+	@include vr($h5-font-size, $h5-vr-line-height);
+	@include vr-margin-bottom($h5-vr-margin-bottom);
+
+	font-style: $h5-font-style;
+	font-weight: $h5-font-weight;
+	font-family: $h5-font-family;
+	color: $h5-text-color;
+}
+
+h6 {
+	@include vr($h6-font-size, $h6-vr-line-height);
+	@include vr-margin-bottom($h6-vr-margin-bottom);
+
+	font-style: $h6-font-style;
+	font-weight: $h6-font-weight;
+	font-family: $h6-font-family;
+	color: $h6-text-color;
+}
+
+p {
+	@include vr($p-font-size);
+	@include vr-margin-bottom($p-vr-margin-bottom);
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.ellipsis {
+	@include ellipsis;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: #{from()};
+}
+
+.text-right	{
+	text-align: #{to()};
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+@include mobile-large {
+	@include aligment('mobile-large-above');
+	@include text-aligment('mobile-large-above');
+	@include visibility('mobile-large-above');
+}
+
+@include tablet {
+	@include aligment('tablet-above');
+	@include text-aligment('tablet-above');
+	@include visibility('tablet-above');
+}
+
+@include screen-small {
+	@include aligment('screen-small-above');
+	@include text-aligment('screen-small-above');
+	@include visibility('screen-small-above');
+}
+
+@include screen-large {
+	@include aligment('screen-large-only');
+	@include text-aligment('screen-large-only');
+	@include visibility('screen-large-only');
+}
+
+@include mobile-small-below {
+	@include aligment('mobile-small-only');
+	@include text-aligment('mobile-small-only');
+	@include visibility('mobile-small-only');
+}
+
+@include mobile-large-below {
+	@include aligment('mobile-large-below');
+	@include text-aligment('mobile-large-below');
+	@include visibility('mobile-large-below');
+}
+
+@include tablet-below {
+	@include aligment('tablet-below');
+	@include text-aligment('tablet-below');
+	@include visibility('tablet-below');
+}
+
+@include screen-small-below {
+	@include aligment('screen-small-below');
+	@include text-aligment('screen-small-below');
+	@include visibility('screen-small-below');
+}
+
+@include mobile-large-only {
+	@include visibility('mobile-large-only');
+}
+
+@include tablet-only {
+	@include visibility('tablet-only');
+}
+
+@include screen-small-only {
+	@include visibility('screen-small-only');
+}	

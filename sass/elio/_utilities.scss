@@ -1,0 +1,216 @@
+.ltr {
+	direction: ltr;
+}
+
+.rtl {
+	direction: rtl;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.block {
+	display: block;
+}
+
+.inline {
+	display: inline;
+	float: none;
+}
+
+.inline-block {
+	display: inline-block;
+	float: none;
+}
+
+.center {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left {
+	float: from() !important;
+}
+
+.right {
+	float: to() !important;
+}
+
+.show	{
+	display: block;
+}
+
+.hide	{
+	display: none;
+}
+
+.show-important	{
+	display: block !important;
+}
+
+.hide-important	{
+	display: none !important;
+}
+
+.circle {
+	@include border-radius(50, %);
+}
+
+.rounded {
+	@include border-radius($base-border-radius);
+}
+
+.bordered {
+	border: $base-block-border;
+}
+
+.filled {
+	background: $base-block-background;
+}
+
+.cover {
+	@extend .block;
+	
+	position: relative;
+
+	&.fill {
+		img {
+			min-width: 100%;
+		}
+	}
+}
+
+.half {
+	width: 50%;
+}
+
+.push-up-half {
+	margin-top: $gaps;
+}
+
+.push-up-once {
+	margin-top: $gaps * 2;
+}
+
+.push-up-twice {
+	margin-top: $gaps * 4;
+}
+
+.push-up-thrice {
+	margin-top: $gaps * 6;
+}
+
+.push-#{to()}-half {
+	margin-#{to()}: $gaps;
+}
+
+.push-#{to()}-once {
+	margin-#{to()}: $gaps * 2;
+}
+
+.push-#{to()}-twice {
+	margin-#{to()}: $gaps * 4;
+}
+
+.push-#{to()}-thrice {
+	margin-#{to()}: $gaps * 6;
+}
+
+.push-down-half {
+	margin-bottom: $gaps;
+}
+
+.push-down-once {
+	margin-bottom: $gaps * 2;
+}
+
+.push-down-twice {
+	margin-bottom: $gaps * 4;
+}
+
+.push-down-thrice {
+	margin-bottom: $gaps * 6;
+}
+
+.push-#{from()}-half {
+	margin-#{from()}: $gaps;
+}
+
+.push-#{from()}-once {
+	margin-#{from()}: $gaps * 2;
+}
+
+.push-#{from()}-twice {
+	margin-#{from()}: $gaps * 4;
+}
+
+.push-#{from()}-thrice {
+	margin-#{from()}: $gaps * 6;
+}
+
+.compact-up-half {
+	padding-top: $gaps;
+}
+
+.compact-up-once {
+	padding-top: $gaps * 2;
+}
+
+.compact-up-twice {
+	padding-top: $gaps * 4;
+}
+
+.compact-up-thrice {
+	padding-top: $gaps * 6;
+}
+
+.compact-#{to()}-half {
+	padding-#{to()}: $gaps;
+}
+
+.compact-#{to()}-once {
+	padding-#{to()}: $gaps * 2;
+}
+
+.compact-#{to()}-twice {
+	padding-#{to()}: $gaps * 4;
+}
+
+.compact-#{to()}-thrice {
+	padding-#{to()}: $gaps * 6;
+}
+
+.compact-down-half {
+	padding-bottom: $gaps;
+}
+
+.compact-down-once {
+	padding-bottom: $gaps * 2;
+}
+
+.compact-down-twice {
+	padding-bottom: $gaps * 4;
+}
+
+.compact-down-thrice {
+	padding-bottom: $gaps * 6;
+}
+
+.compact-#{from()}-half {
+	padding-#{from()}: $gaps;
+}
+
+.compact-#{from()}-once {
+	padding-#{from()}: $gaps * 2;
+}
+
+.compact-#{from()}-twice {
+	padding-#{from()}: $gaps * 4;
+}
+
+.compact-#{from()}-thrice {
+	padding-#{from()}: $gaps * 6;
+}
