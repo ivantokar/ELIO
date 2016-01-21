@@ -15,7 +15,6 @@ textarea {
 	color: $input-text-color;
 	padding: $input-paddings;
 	background: $input-background;
-
 	&:hover {
 		border-color: $input-border-hover;
 	}
@@ -23,6 +22,7 @@ textarea {
 	&:focus {
 		border-color: $input-border-focus;
 		background: $input-background-focus;
+		outline: none;
 
 		@include box-shadow($input-box-shadow-focus);
 	}
@@ -39,6 +39,8 @@ textarea {
 		border-color: $input-disable-border-color;
 		background: $input-disable-background;
 		cursor: not-allowed;
+		pointer-events: none;
+		outline: none;
 	}
 	
 	//@mixin placeholder {

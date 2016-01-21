@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="assets/css/all.min.css">
 </head>
 <body>
-	
 	<div class="row">
 		<div class="col tablet-2">sidebar</div>
 		<div class="col tablet-10">
@@ -30,6 +29,7 @@
  			<p class="huge">Huge text</p>
 		</div>
 	</div>
+
 	
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
