@@ -2816,6 +2816,12 @@ b, strong, .bold {
 u, .underline {
   text-decoration: underline; }
 
+hr {
+  margin: 0;
+  border: 0 none;
+  height: 0.0625rem;
+  background: #e0e0e0; }
+
 .lowercase {
   text-transform: lowercase; }
 

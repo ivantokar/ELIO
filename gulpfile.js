@@ -10,9 +10,9 @@ var gulp = require('gulp'),
 
 gulp.task('watcher', ['jade', 'styles', 'scripts'], function() {
 	livereload.listen();
-	gulp.watch('sass/**/*.scss', ['styles', 'sources']);
+	gulp.watch('sass/**/*.scss', ['styles']);
 	gulp.watch('jade/**/*.jade', ['jade']);
-	gulp.watch('scripts/**/*.js', ['scripts', 'sources']);
+	gulp.watch('scripts/**/*.js', ['scripts']);
 });
 
 gulp.task('jade', function () {

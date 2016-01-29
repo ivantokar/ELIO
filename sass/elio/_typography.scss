@@ -128,6 +128,13 @@ u, .underline {
 	text-decoration: underline;
 }
 
+hr {
+	margin: 0;
+	border: 0 none;
+	height: rem($hr-weight);
+	background: $hr-color;
+}
+
 .lowercase {
 	text-transform: lowercase;
 }
