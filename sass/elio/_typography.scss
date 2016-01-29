@@ -63,22 +63,69 @@ p {
 	@include vr-margin-bottom($p-vr-margin-bottom);
 }
 
-p, div, span, a, b, strong, i, em {
+h1, h2, h3, h4, h5, h6, p, div, span, a, b, strong, i, em {
+	// sizes
 	&.tiny {
-		font-size: rem(11);	
+		font-size: rem($tiny-text-font-size);	
 	}
 
 	&.small {
-		font-size: rem(12);	
+		font-size: rem($small-text-font-size);	
 	}
 
 	&.large {
-		font-size: rem(16);	
+		font-size: rem($large-text-font-size);	
 	}
 
 	&.huge {
-		font-size: rem(18);	
+		font-size: rem($huge-text-font-size);	
 	}
+	
+	// colors
+	&.light {
+		color: $light-text-color;
+	}
+
+	&.red {
+		color: $red-text-color;
+	}
+
+	&.green {
+		color: $green-text-color;
+	}
+
+	&.blue {
+		color: $blue-text-color;
+	}
+
+	&.orange {
+		color: $orange-text-color;
+	}
+}
+
+a {
+	&, &:link, &:visited, &:active {
+		color: $link-color;
+		text-decoration: $link-decoration;
+	}
+
+	&:hover {
+		color: $link-color-hover;
+		text-decoration: $link-decoration-hover;
+	}
+}
+
+i, em, .italic {
+	font-family: $italic-font-family;
+	font-style: italic;
+}
+
+b, strong, .bold {
+	font-weight: bold;
+}
+
+u, .underline {
+	text-decoration: underline;
 }
 
 .lowercase {

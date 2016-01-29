@@ -47,12 +47,12 @@ html {
   direction: ltr !important; }
 
 body {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
   font-style: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8125rem;
   color: #212121;
   background: none;
   text-align: left; }
@@ -2684,7 +2684,7 @@ h1 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 h2 {
@@ -2694,7 +2694,7 @@ h2 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 h3 {
@@ -2704,7 +2704,7 @@ h3 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 h4 {
@@ -2714,7 +2714,7 @@ h4 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 h5 {
@@ -2724,7 +2724,7 @@ h5 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 h6 {
@@ -2734,19 +2734,25 @@ h6 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: bold;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #424242; }
 
 p {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
   margin-bottom: 1.5rem; }
 
-p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny {
+h1.tiny, h2.tiny, h3.tiny, h4.tiny, h5.tiny, h6.tiny, p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny {
   font-size: 0.6875rem; }
 
-p.small, p.form-caption-over,
+h1.small, h1.form-caption-over,
+h1.form-caption-under, h2.small, h2.form-caption-over,
+h2.form-caption-under, h3.small, h3.form-caption-over,
+h3.form-caption-under, h4.small, h4.form-caption-over,
+h4.form-caption-under, h5.small, h5.form-caption-over,
+h5.form-caption-under, h6.small, h6.form-caption-over,
+h6.form-caption-under, p.small, p.form-caption-over,
 p.form-caption-under, div.small, div.form-caption-over,
 div.form-caption-under, span.small, span.form-caption-over,
 span.form-caption-under, a.small, a.form-caption-over,
@@ -2757,11 +2763,58 @@ i.form-caption-under, em.small, em.form-caption-over,
 em.form-caption-under {
   font-size: 0.75rem; }
 
-p.large, div.large, span.large, a.large, b.large, strong.large, i.large, em.large {
+h1.large, h2.large, h3.large, h4.large, h5.large, h6.large, p.large, div.large, span.large, a.large, b.large, strong.large, i.large, em.large {
   font-size: 1rem; }
 
-p.huge, div.huge, span.huge, a.huge, b.huge, strong.huge, i.huge, em.huge {
+h1.huge, h2.huge, h3.huge, h4.huge, h5.huge, h6.huge, p.huge, div.huge, span.huge, a.huge, b.huge, strong.huge, i.huge, em.huge {
   font-size: 1.125rem; }
+
+h1.light, h1.form-caption-over,
+h1.form-caption-under, h1.form-static, h2.light, h2.form-caption-over,
+h2.form-caption-under, h2.form-static, h3.light, h3.form-caption-over,
+h3.form-caption-under, h3.form-static, h4.light, h4.form-caption-over,
+h4.form-caption-under, h4.form-static, h5.light, h5.form-caption-over,
+h5.form-caption-under, h5.form-static, h6.light, h6.form-caption-over,
+h6.form-caption-under, h6.form-static, p.light, p.form-caption-over,
+p.form-caption-under, p.form-static, div.light, div.form-caption-over,
+div.form-caption-under, div.form-static, span.light, span.form-caption-over,
+span.form-caption-under, span.form-static, a.light, a.form-caption-over,
+a.form-caption-under, a.form-static, b.light, b.form-caption-over,
+b.form-caption-under, b.form-static, strong.light, strong.form-caption-over,
+strong.form-caption-under, strong.form-static, i.light, i.form-caption-over,
+i.form-caption-under, i.form-static, em.light, em.form-caption-over,
+em.form-caption-under, em.form-static {
+  color: #757575; }
+
+h1.red, h2.red, h3.red, h4.red, h5.red, h6.red, p.red, div.red, span.red, a.red, b.red, strong.red, i.red, em.red {
+  color: #e53935; }
+
+h1.green, h2.green, h3.green, h4.green, h5.green, h6.green, p.green, div.green, span.green, a.green, b.green, strong.green, i.green, em.green {
+  color: #388e3c; }
+
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, p.blue, div.blue, span.blue, a.blue, b.blue, strong.blue, i.blue, em.blue {
+  color: #1e88e5; }
+
+h1.orange, h2.orange, h3.orange, h4.orange, h5.orange, h6.orange, p.orange, div.orange, span.orange, a.orange, b.orange, strong.orange, i.orange, em.orange {
+  color: #f57c00; }
+
+a, a:link, a:visited, a:active {
+  color: #2196f3;
+  text-decoration: underline; }
+
+a:hover {
+  color: #f44336;
+  text-decoration: none; }
+
+i, em, .italic {
+  font-family: "PT Serif", serif;
+  font-style: italic; }
+
+b, strong, .bold {
+  font-weight: bold; }
+
+u, .underline {
+  text-decoration: underline; }
 
 .lowercase {
   text-transform: lowercase; }
@@ -3009,7 +3062,7 @@ textarea {
   transition: all 0.2s ease;
   width: 100%;
   font-size: 0.8125rem;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   height: 34;
   border: 1px solid #bdbdbd;
   color: #212121;
@@ -3028,6 +3081,7 @@ textarea {
   textarea:focus {
     border-color: #757575;
     background: white;
+    outline: none;
     -webkit-box-shadow: 0 0 5px rgba(117, 117, 117, 0.3);
     -moz-box-shadow: 0 0 5px rgba(117, 117, 117, 0.3);
     box-shadow: 0 0 5px rgba(117, 117, 117, 0.3); }
@@ -3063,7 +3117,9 @@ textarea {
     filter: alpha(opacity=65);
     border-color: #e0e0e0;
     background: whitesmoke;
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    pointer-events: none;
+    outline: none; }
   input[type="text"]::-moz-placeholder,
   input[type="email"]::-moz-placeholder,
   input[type="password"]::-moz-placeholder,
@@ -3140,7 +3196,7 @@ textarea {
   resize: none; }
 
 label {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
   max-width: 100%;
   padding: 0.3125rem 0;
@@ -3180,7 +3236,7 @@ label {
   -webkit-border-radius: 0.375rem;
   border-radius: 0.375rem;
   background-clip: padding-box;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.8125rem;
   line-height: 2.125rem;
   padding: 0 1.25rem;
