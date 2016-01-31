@@ -3239,8 +3239,8 @@ label {
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-border-radius: 0.375rem;
-  border-radius: 0.375rem;
+  -webkit-border-radius: 0.1875rem;
+  border-radius: 0.1875rem;
   background-clip: padding-box;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8125rem;
@@ -3334,6 +3334,48 @@ label {
     .button.huge .fa, a.button.huge .fa {
       font-size: 0.875rem;
       line-height: 2.75rem; }
+  .button.light, .button.form-caption-over,
+  .button.form-caption-under, .button.form-static, a.button.light, a.button.form-caption-over,
+  a.button.form-caption-under, a.button.form-static {
+    color: #616161;
+    background: #fafafa; }
+    .button.light:hover, .button.form-caption-over:hover,
+    .button.form-caption-under:hover, .button.form-static:hover, .button.light:focus, .button.form-caption-over:focus,
+    .button.form-caption-under:focus, .button.form-static:focus, .button.light.hover, .button.hover.form-caption-over,
+    .button.hover.form-caption-under, .button.hover.form-static, a.button.light:hover, a.button.form-caption-over:hover,
+    a.button.form-caption-under:hover, a.button.form-static:hover, a.button.light:focus, a.button.form-caption-over:focus,
+    a.button.form-caption-under:focus, a.button.form-static:focus, a.button.light.hover, a.button.hover.form-caption-over,
+    a.button.hover.form-caption-under, a.button.hover.form-static {
+      background: whitesmoke;
+      color: #212121; }
+    .button.light:active, .button.form-caption-over:active,
+    .button.form-caption-under:active, .button.form-static:active, .button.light.active, .button.active.form-caption-over,
+    .button.active.form-caption-under, .button.active.form-static, a.button.light:active, a.button.form-caption-over:active,
+    a.button.form-caption-under:active, a.button.form-static:active, a.button.light.active, a.button.active.form-caption-over,
+    a.button.active.form-caption-under, a.button.active.form-static {
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+  .button.red, a.button.red {
+    color: #ffebee;
+    background: #f44336; }
+    .button.red:hover, .button.red:focus, .button.red.hover, a.button.red:hover, a.button.red:focus, a.button.red.hover {
+      background: #e53935;
+      color: white; }
+    .button.red:active, .button.red.active, a.button.red:active, a.button.red.active {
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+  .button.green, a.button.green {
+    color: #e8f5e9;
+    background: #4caf50; }
+    .button.green:hover, .button.green:focus, .button.green.hover, a.button.green:hover, a.button.green:focus, a.button.green.hover {
+      background: #43a047;
+      color: white; }
+    .button.green:active, .button.green.active, a.button.green:active, a.button.green.active {
+      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
   .button.blue, a.button.blue {
     color: #e3f2fd;
     background: #2196f3; }
@@ -3344,26 +3386,21 @@ label {
       -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .button.green, a.button.green {
-    color: #e8f5e9;
-    background: #4caf50; }
-    .button.green:hover, .button.green:focus, .button.green.hover, a.button.green:hover, a.button.green:focus, a.button.green.hover {
-      background: 0;
-      color: #e8f5e9; }
-    .button.green:active, .button.green.active, a.button.green:active, a.button.green.active {
+  .button.orange, a.button.orange {
+    color: #fff3e0;
+    background: #ff9800; }
+    .button.orange:hover, .button.orange:focus, .button.orange.hover, a.button.orange:hover, a.button.orange:focus, a.button.orange.hover {
+      background: #fb8c00;
+      color: white; }
+    .button.orange:active, .button.orange.active, a.button.orange:active, a.button.orange.active {
       -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
       -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .button.red, a.button.red {
-    color: #ffebee;
-    background: #f44336; }
-    .button.red:hover, .button.red:focus, .button.red.hover, a.button.red:hover, a.button.red:focus, a.button.red.hover {
-      background: 0;
-      color: #ffebee; }
-    .button.red:active, .button.red.active, a.button.red:active, a.button.red.active {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+.buttons {
+  font-size: 0; }
+  .buttons .button + .button {
+    margin-left: 0.625rem; }
 
 .ltr {
   direction: ltr; }

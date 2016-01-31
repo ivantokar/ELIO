@@ -148,12 +148,13 @@ $label-paddings:							rem(5) 0;
 // BUTTONS
 $buttons-transition:						all 0.2s ease;
 $buttons-box-shadow:						none;
-$buttons-border-radius:						6;
+$buttons-border-radius:						3;
 $buttons-box-shadow-hover:					0 1px 2px rgba(color(black), .3);
 $buttons-box-shadow-active:					inset 0 1px 2px rgba(color(black), .3);
 // button disable
 $buttons-disable-text-color:				color(grey);
 $buttons-disable-background:				color(grey, 300);
+$buttons-gap:								$gaps;
 // default button
 $default-button-font-family:				$base-font-family;
 $default-button-font-size:					13;
@@ -181,21 +182,31 @@ $huge-button-height:						44;
 $huge-button-paddings:						0 rem(20);
 $huge-button-font-size:						18;
 // BUTTON COLORS
-// blue button
-$blue-button-text-color:					color(blue, 50);
-$blue-button-background:					color(blue);
-$blue-button-text-color-hover:				color(white);
-$blue-button-background-hover:				color(blue, 600);
-// green button
-$green-button-text-color:					color(green, 50);
-$green-button-background:					color(green);
-$green-button-text-color-hover:				color(white);
-$green-button-background-hover:				color(green, 600);
+// light button
+$light-button-text-color:					color(grey, 700);
+$light-button-background:					color(grey, 50);
+$light-button-text-color-hover:				color(grey, 900);
+$light-button-background-hover:				color(grey, 100);
 // red button
 $red-button-text-color:						color(red, 50);
 $red-button-background:						color(red);
 $red-button-text-color-hover:				color(white);
 $red-button-background-hover:				color(red, 600);
+// green button
+$green-button-text-color:					color(green, 50);
+$green-button-background:					color(green);
+$green-button-text-color-hover:				color(white);
+$green-button-background-hover:				color(green, 600);
+// blue button
+$blue-button-text-color:					color(blue, 50);
+$blue-button-background:					color(blue);
+$blue-button-text-color-hover:				color(white);
+$blue-button-background-hover:				color(blue, 600);
+// orange button
+$orange-button-text-color:					color(orange, 50);
+$orange-button-background:					color(orange);
+$orange-button-text-color-hover:			color(white);
+$orange-button-background-hover:			color(orange, 600);
 
 // simply comment those elements that do not need to be compiled
 @import 'elio/reset';
