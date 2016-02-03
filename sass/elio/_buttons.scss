@@ -7,7 +7,8 @@
 	
 	font-family: $default-button-font-family;
 	font-size: rem($default-button-font-size);
-	line-height: rem($default-button-height);
+	font-weight: $default-button-font-weight;
+	line-height: 100%;
 	padding: $default-button-paddings;
 	height: rem($default-button-height);
 	margin-bottom: 0;
@@ -28,6 +29,7 @@
 
 		background-color: $default-button-background-hover;
 		color: $default-button-text-color-hover;
+		border: $default-button-border-hover;
 	}
 
 	&:active,
@@ -83,11 +85,19 @@
 	@include button-size('large', $large-button-height, $large-button-paddings, $large-button-font-size);
 	@include button-size('huge', $huge-button-height, $huge-button-paddings, $huge-button-font-size);
 	// colors
-	@include button-color('light', $light-button-text-color, $light-button-background, $light-button-text-color-hover, $light-button-background-hover);
+	@include button-color(
+		'light',
+		$light-button-text-color,
+		$light-button-background,
+		$light-button-text-color-hover,
+		$light-button-background-hover,
+		$light-button-border,
+		$light-button-border-hover
+	);
 	@include button-color('red', $red-button-text-color, $red-button-background, $red-button-text-color-hover, $red-button-background-hover);
-	@include button-color('green', $green-button-text-color, $green-button-background, $green-button-text-color-hover, $green-button-background-hover);
-	@include button-color('blue', $blue-button-text-color, $blue-button-background, $blue-button-text-color-hover, $blue-button-background-hover);
-	@include button-color('orange', $orange-button-text-color, $orange-button-background, $orange-button-text-color-hover, $orange-button-background-hover);
+	@include button-color('green', $green-button-text-color, $green-button-background, $green-button-text-color-hover, $green-button-background-hover, $green-button-border, $green-button-border-hover);
+	@include button-color('blue', $blue-button-text-color, $blue-button-background, $blue-button-text-color-hover, $blue-button-background-hover, $blue-button-border, $blue-button-border-hover);
+	@include button-color('orange', $orange-button-text-color, $orange-button-background, $orange-button-text-color-hover, $orange-button-background-hover, $orange-button-border, $orange-button-border-hover);
 }
 
 .buttons {

@@ -149,8 +149,8 @@ $label-paddings:							rem(5) 0;
 $buttons-transition:						all 0.2s ease;
 $buttons-box-shadow:						none;
 $buttons-border-radius:						3;
-$buttons-box-shadow-hover:					0 1px 2px rgba(color(black), .3);
-$buttons-box-shadow-active:					inset 0 1px 2px rgba(color(black), .3);
+$buttons-box-shadow-hover:					0 0 10px rgba(color(black), .2);
+$buttons-box-shadow-active:					inset 0 1px 2px rgba(color(black), .2);
 // button disable
 $buttons-disable-text-color:				color(grey);
 $buttons-disable-background:				color(grey, 300);
@@ -158,13 +158,52 @@ $buttons-gap:								$gaps;
 // default button
 $default-button-font-family:				$base-font-family;
 $default-button-font-size:					13;
+$default-button-font-weight:				normal;
 $default-button-text-color:					color(grey, 900);	
 $default-button-text-color-hover:			color(black);
 $default-button-background:					color(grey, 300);	
 $default-button-background-hover:			darken($default-button-background, 5);
 $default-button-height:						34;
-$default-button-border:						0 none;
 $default-button-paddings:					0 rem(20);	
+$default-button-border:						0 none;
+$default-button-border-hover:				0 none;
+// BUTTON COLORS
+// light button
+$light-button-text-color:					color(grey, 700);
+$light-button-background:					color(grey, 50);
+$light-button-text-color-hover:				color(grey, 900);
+$light-button-background-hover:				color(grey, 100);
+$light-button-border:						0 none;
+$light-button-border-hover:					0 none;
+// red button
+$red-button-text-color:						color(red, 50);
+$red-button-background:						color(red);
+$red-button-text-color-hover:				color(white);
+$red-button-background-hover:				color(red, 600);
+$red-button-border:							0 none;
+$red-button-border-hover:					0 none;
+// green button
+$green-button-text-color:					color(green, 50);
+$green-button-background:					color(green);
+$green-button-text-color-hover:				color(white);
+$green-button-background-hover:				color(green, 600);
+$green-button-border:						0 none;
+$green-button-border-hover:					0 none;
+// blue button
+$blue-button-text-color:					color(blue, 50);
+$blue-button-background:					color(blue);
+$blue-button-text-color-hover:				color(white);
+$blue-button-background-hover:				color(blue, 600);
+$blue-button-border:						0 none;
+$blue-button-border-hover:					0 none;
+// orange button
+$orange-button-text-color:					color(orange, 50);
+$orange-button-background:					color(orange);
+$orange-button-text-color-hover:			color(white);
+$orange-button-background-hover:			color(orange, 600);
+$orange-button-border:						0 none;
+$orange-button-border-hover:				0 none;
+// BUTTON SIZES
 // button extra small
 $tiny-button-height:						24;
 $tiny-button-paddings:						0 rem(10);
@@ -181,32 +220,7 @@ $large-button-font-size:					16;
 $huge-button-height:						44;
 $huge-button-paddings:						0 rem(20);
 $huge-button-font-size:						18;
-// BUTTON COLORS
-// light button
-$light-button-text-color:					color(grey, 700);
-$light-button-background:					color(grey, 50);
-$light-button-text-color-hover:				color(grey, 900);
-$light-button-background-hover:				color(grey, 100);
-// red button
-$red-button-text-color:						color(red, 50);
-$red-button-background:						color(red);
-$red-button-text-color-hover:				color(white);
-$red-button-background-hover:				color(red, 600);
-// green button
-$green-button-text-color:					color(green, 50);
-$green-button-background:					color(green);
-$green-button-text-color-hover:				color(white);
-$green-button-background-hover:				color(green, 600);
-// blue button
-$blue-button-text-color:					color(blue, 50);
-$blue-button-background:					color(blue);
-$blue-button-text-color-hover:				color(white);
-$blue-button-background-hover:				color(blue, 600);
-// orange button
-$orange-button-text-color:					color(orange, 50);
-$orange-button-background:					color(orange);
-$orange-button-text-color-hover:			color(white);
-$orange-button-background-hover:			color(orange, 600);
+
 
 // simply comment those elements that do not need to be compiled
 @import 'elio/reset';

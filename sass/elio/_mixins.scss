@@ -397,7 +397,6 @@
 @mixin button-size($parent, $height, $paddings, $font-size) {
 	&.#{$parent} {
 		font-size: rem($font-size);
-		line-height: rem($height - 2);
 		padding: $paddings;
 		height: #{$height}px;
 		height: rem($height);
@@ -410,21 +409,23 @@
 	}
 }
 
-@mixin button-color($parent, $text-color, $background, $text-color-hover: $text-color, $background-hover: 0) {
+@mixin button-color($parent, $text-color, $background, $text-color-hover: $text-color, $background-hover: none, $border: 0 none, $border-hover: 0 none) {
 	&.#{$parent} {
 		color: $text-color;
 		background: $background;
+		border: $border;
 
 		&:hover,
 		&:focus,
 		&.hover {
 			background: $background-hover;
 			color: $text-color-hover;
+			border: $border-hover;
 		}
 
 		&:active,
 		&.active {
-			@include box-shadow(inset $buttons-box-shadow-hover);
+			@include box-shadow(inset $buttons-box-shadow-active);
 		}
 	}
 }

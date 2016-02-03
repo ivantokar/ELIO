@@ -3244,7 +3244,8 @@ label {
   background-clip: padding-box;
   font-family: "Open Sans", sans-serif;
   font-size: 0.8125rem;
-  line-height: 2.125rem;
+  font-weight: normal;
+  line-height: 100%;
   padding: 0 1.25rem;
   height: 2.125rem;
   margin-bottom: 0;
@@ -3258,15 +3259,16 @@ label {
   border: 0 none;
   outline: none; }
   .button:hover, .button:focus, .button.hover, a.button:hover, a.button:focus, a.button.hover {
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: lightgray;
-    color: black; }
+    color: black;
+    border: 0 none; }
   .button:active, .button.active, a.button:active, a.button.active {
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2); }
   .button.disabled, .button.disabled:hover, .button.disabled:focus, .button[disabled], .button[disabled]:hover, .button[disabled]:focus, a.button.disabled, a.button.disabled:hover, a.button.disabled:focus, a.button[disabled], a.button[disabled]:hover, a.button[disabled]:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -3292,7 +3294,6 @@ label {
       margin-left: 5px; }
   .button.tiny, a.button.tiny {
     font-size: 0.6875rem;
-    line-height: 1.375rem;
     padding: 0 0.625rem;
     height: 24px;
     height: 1.5rem;
@@ -3304,7 +3305,6 @@ label {
   .button.form-caption-under, a.button.small, a.button.form-caption-over,
   a.button.form-caption-under {
     font-size: 0.75rem;
-    line-height: 1.625rem;
     padding: 0 1.25rem;
     height: 28px;
     height: 1.75rem;
@@ -3316,7 +3316,6 @@ label {
       line-height: 1.75rem; }
   .button.large, a.button.large {
     font-size: 1rem;
-    line-height: 2.375rem;
     padding: 0 1.25rem;
     height: 40px;
     height: 2.5rem;
@@ -3326,7 +3325,6 @@ label {
       line-height: 2.5rem; }
   .button.huge, a.button.huge {
     font-size: 1.125rem;
-    line-height: 2.625rem;
     padding: 0 1.25rem;
     height: 44px;
     height: 2.75rem;
@@ -3338,7 +3336,8 @@ label {
   .button.form-caption-under, .button.form-static, a.button.light, a.button.form-caption-over,
   a.button.form-caption-under, a.button.form-static {
     color: #616161;
-    background: #fafafa; }
+    background: #fafafa;
+    border: 0 none; }
     .button.light:hover, .button.form-caption-over:hover,
     .button.form-caption-under:hover, .button.form-static:hover, .button.light:focus, .button.form-caption-over:focus,
     .button.form-caption-under:focus, .button.form-static:focus, .button.light.hover, .button.hover.form-caption-over,
@@ -3347,55 +3346,64 @@ label {
     a.button.form-caption-under:focus, a.button.form-static:focus, a.button.light.hover, a.button.hover.form-caption-over,
     a.button.hover.form-caption-under, a.button.hover.form-static {
       background: whitesmoke;
-      color: #212121; }
+      color: #212121;
+      border: 0 none; }
     .button.light:active, .button.form-caption-over:active,
     .button.form-caption-under:active, .button.form-static:active, .button.light.active, .button.active.form-caption-over,
     .button.active.form-caption-under, .button.active.form-static, a.button.light:active, a.button.form-caption-over:active,
     a.button.form-caption-under:active, a.button.form-static:active, a.button.light.active, a.button.active.form-caption-over,
     a.button.active.form-caption-under, a.button.active.form-static {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
   .button.red, a.button.red {
     color: #ffebee;
-    background: #f44336; }
+    background: #f44336;
+    border: 0 none; }
     .button.red:hover, .button.red:focus, .button.red.hover, a.button.red:hover, a.button.red:focus, a.button.red.hover {
       background: #e53935;
-      color: white; }
+      color: white;
+      border: 0 none; }
     .button.red:active, .button.red.active, a.button.red:active, a.button.red.active {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
   .button.green, a.button.green {
     color: #e8f5e9;
-    background: #4caf50; }
+    background: #4caf50;
+    border: 0 none; }
     .button.green:hover, .button.green:focus, .button.green.hover, a.button.green:hover, a.button.green:focus, a.button.green.hover {
       background: #43a047;
-      color: white; }
+      color: white;
+      border: 0 none; }
     .button.green:active, .button.green.active, a.button.green:active, a.button.green.active {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
   .button.blue, a.button.blue {
     color: #e3f2fd;
-    background: #2196f3; }
+    background: #2196f3;
+    border: 0 none; }
     .button.blue:hover, .button.blue:focus, .button.blue.hover, a.button.blue:hover, a.button.blue:focus, a.button.blue.hover {
       background: #1e88e5;
-      color: white; }
+      color: white;
+      border: 0 none; }
     .button.blue:active, .button.blue.active, a.button.blue:active, a.button.blue.active {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
   .button.orange, a.button.orange {
     color: #fff3e0;
-    background: #ff9800; }
+    background: #ff9800;
+    border: 0 none; }
     .button.orange:hover, .button.orange:focus, .button.orange.hover, a.button.orange:hover, a.button.orange:focus, a.button.orange.hover {
       background: #fb8c00;
-      color: white; }
+      color: white;
+      border: 0 none; }
     .button.orange:active, .button.orange.active, a.button.orange:active, a.button.orange.active {
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3); }
+      -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
 
 .buttons {
   font-size: 0; }
