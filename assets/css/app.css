@@ -51,7 +51,7 @@ body {
   font-size: 0.8125rem;
   line-height: 1.84615;
   font-style: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 0.8125rem;
   color: #212121;
   background: none;
@@ -2684,7 +2684,7 @@ h1 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 h2 {
@@ -2694,7 +2694,7 @@ h2 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 h3 {
@@ -2704,7 +2704,7 @@ h3 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 h4 {
@@ -2714,7 +2714,7 @@ h4 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 h5 {
@@ -2724,7 +2724,7 @@ h5 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 h6 {
@@ -2734,7 +2734,7 @@ h6 {
   margin-bottom: 1.5rem;
   font-style: normal;
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #424242; }
 
 p {
@@ -3068,7 +3068,7 @@ textarea {
   transition: all 0.2s ease;
   width: 100%;
   font-size: 0.8125rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   height: 34;
   border: 1px solid #bdbdbd;
   color: #212121;
@@ -3202,7 +3202,7 @@ textarea {
   resize: none; }
 
 label {
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 0.875rem;
   max-width: 100%;
   padding: 0.3125rem 0;
@@ -3242,7 +3242,7 @@ label {
   -webkit-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
   background-clip: padding-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
   line-height: 100%;
