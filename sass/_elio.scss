@@ -6,8 +6,12 @@
 $base-direction:							ltr;
 $base-background:							none;
 $base-text-color:							color(grey, 900);
-$base-font-style:							normal;		
-$base-font-family:							'Open Sans', sans-serif;		
+$base-font-style:							normal;	
+$base-font-mono:							'PT Mono', monospace;
+$base-font-sans:							'PT Sans', sans-serif;
+$base-font-serif:							'PT Serif', serif;
+$base-font-narrow:							'PT Sans Narrow', sans-serif;
+$base-font-family:							$base-font-sans;		
 $base-font-size:							13; // px
 $base-line-height:							24; // px
 $base-border-radius:						2; // px
