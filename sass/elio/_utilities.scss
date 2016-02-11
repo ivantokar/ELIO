@@ -39,22 +39,6 @@
 	float: to() !important;
 }
 
-.show	{
-	display: block;
-}
-
-.hide	{
-	display: none;
-}
-
-.show-important	{
-	display: block !important;
-}
-
-.hide-important	{
-	display: none !important;
-}
-
 .circle {
 	@include border-radius(50, %);
 }
@@ -151,6 +135,22 @@
 	margin-#{from()}: $gaps * 6;
 }
 
+.compact-half {
+	padding: $gaps;
+}
+
+.compact-once {
+	padding: $gaps * 2;
+}
+
+.compact-twice {
+	padding: $gaps * 4;
+}
+
+.compact-thrice {
+	padding: $gaps * 6;
+}
+
 .compact-up-half {
 	padding-top: $gaps;
 }
@@ -213,4 +213,70 @@
 
 .compact-#{from()}-thrice {
 	padding-#{from()}: $gaps * 6;
+}
+
+// VISABILITY
+.show	{
+	display: block;
+}
+
+.hide	{
+	display: none;
+}
+
+.show-important	{
+	display: block !important;
+}
+
+.hide-important	{
+	display: none !important;
+}
+
+// above
+@include mobile-large {
+	@include visibility('mobile-large-above');
+}
+
+@include tablet {
+	@include visibility('tablet-above');
+}
+
+@include screen-small {
+	@include visibility('screen-small-above');
+}
+
+// only screen large
+@include screen-large {
+	@include visibility('screen-large-above');
+}
+
+// below
+// only mobile small
+@include mobile-small-below {
+	@include visibility('mobile-small-below');
+}
+
+@include mobile-large-below {
+	@include visibility('mobile-large-below');
+}
+
+@include tablet-below {
+	@include visibility('tablet-below');
+}
+
+@include screen-small-below {
+	@include visibility('screen-small-below');
+}
+
+// only
+@include mobile-large-only {
+	@include visibility('mobile-large-only');
+}
+
+@include tablet-only {
+	@include visibility('tablet-only');
+}
+
+@include screen-small-only {
+	@include visibility('screen-small-only');
 }

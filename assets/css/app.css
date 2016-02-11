@@ -54,7 +54,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 0.8125rem;
   color: #212121;
-  background: none;
+  background: white;
   text-align: left; }
 
 img {
@@ -3447,18 +3447,6 @@ label {
 .right {
   float: right !important; }
 
-.show {
-  display: block; }
-
-.hide {
-  display: none; }
-
-.show-important {
-  display: block !important; }
-
-.hide-important {
-  display: none !important; }
-
 .circle {
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -3531,6 +3519,18 @@ label {
 .push-left-thrice {
   margin-left: 3.75rem; }
 
+.compact-half {
+  padding: 0.625rem; }
+
+.compact-once {
+  padding: 1.25rem; }
+
+.compact-twice {
+  padding: 2.5rem; }
+
+.compact-thrice {
+  padding: 3.75rem; }
+
 .compact-up-half {
   padding-top: 0.625rem; }
 
@@ -3578,3 +3578,81 @@ label {
 
 .compact-left-thrice {
   padding-left: 3.75rem; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
+.show-important {
+  display: block !important; }
+
+.hide-important {
+  display: none !important; }
+
+@media (min-width: 30rem) {
+  .show-mobile-large-above {
+    display: block !important; }
+  .hide-mobile-large-above {
+    display: none !important; } }
+
+@media (min-width: 48rem) {
+  .show-tablet-above {
+    display: block !important; }
+  .hide-tablet-above {
+    display: none !important; } }
+
+@media (min-width: 64rem) {
+  .show-screen-small-above {
+    display: block !important; }
+  .hide-screen-small-above {
+    display: none !important; } }
+
+@media (min-width: 80rem) {
+  .show-screen-large-above {
+    display: block !important; }
+  .hide-screen-large-above {
+    display: none !important; } }
+
+@media (max-width: 29.937rem) {
+  .show-mobile-small-below {
+    display: block !important; }
+  .hide-mobile-small-below {
+    display: none !important; } }
+
+@media (max-width: 47.937rem) {
+  .show-mobile-large-below {
+    display: block !important; }
+  .hide-mobile-large-below {
+    display: none !important; } }
+
+@media (max-width: 63.937rem) {
+  .show-tablet-below {
+    display: block !important; }
+  .hide-tablet-below {
+    display: none !important; } }
+
+@media (max-width: 79.937rem) {
+  .show-screen-small-below {
+    display: block !important; }
+  .hide-screen-small-below {
+    display: none !important; } }
+
+@media (min-width: 30rem) and (max-width: 47.937rem) {
+  .show-mobile-large-only {
+    display: block !important; }
+  .hide-mobile-large-only {
+    display: none !important; } }
+
+@media (min-width: 48rem) and (max-width: 63.937rem) {
+  .show-tablet-only {
+    display: block !important; }
+  .hide-tablet-only {
+    display: none !important; } }
+
+@media (min-width: 64rem) and (max-width: 79.937rem) {
+  .show-screen-small-only {
+    display: block !important; }
+  .hide-screen-small-only {
+    display: none !important; } }
