@@ -10,11 +10,13 @@ textarea {
 	width: 100%;
 	font-size: rem($input-font-size);
 	font-family: $input-font-family;
-	height: $input-height;
+	line-height: rem($input-height);
+	height: rem($input-height);
 	border: $input-border;
 	color: $input-text-color;
 	padding: $input-paddings;
 	background: $input-background;
+
 	&:hover {
 		border-color: $input-border-hover;
 	}

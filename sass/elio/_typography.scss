@@ -61,6 +61,10 @@ h6 {
 p {
 	@include vr($p-font-size);
 	@include vr-margin-bottom($p-vr-margin-bottom);
+
+	&.indent {
+		text-indent: 5%;
+	}
 }
 
 h1, h2, h3, h4, h5, h6, p, div, span, a, b, strong, i, em {
@@ -133,6 +137,30 @@ hr {
 	border: 0 none;
 	height: rem($hr-weight);
 	background: $hr-color;
+}
+
+ul.list, ol.list {
+	font-size: rem($list-font-size);
+	font-family: $list-font-family;
+	color: $list-text-color;
+	margin: $list-margin;
+	list-style-type: disc;
+
+	li {
+		margin-bottom: rem($list-item-margin-bottom);
+	}
+
+	&.circle {
+		list-style-type: circle;
+	}
+
+	&.square {
+		list-style-type: square;
+	}
+
+	&.decimal {
+		list-style-type: decimal;
+	}
 }
 
 .lowercase {

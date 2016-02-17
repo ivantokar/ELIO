@@ -2742,6 +2742,8 @@ p {
   font-size: 0.8125rem;
   line-height: 1.84615;
   margin-bottom: 1.5rem; }
+  p.indent {
+    text-indent: 5%; }
 
 h1.tiny, h2.tiny, h3.tiny, h4.tiny, h5.tiny, h6.tiny, p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny {
   font-size: 0.6875rem; }
@@ -2822,6 +2824,21 @@ hr {
   height: 0.0625rem;
   background: #e0e0e0; }
 
+ul.list, ol.list {
+  font-size: 0.875rem;
+  font-family: "PT Sans", sans-serif;
+  color: #424242;
+  margin: 5% 0 5% 10%;
+  list-style-type: disc; }
+  ul.list li, ol.list li {
+    margin-bottom: 0.625rem; }
+  ul.list.circle, ol.list.circle {
+    list-style-type: circle; }
+  ul.list.square, ol.list.square {
+    list-style-type: square; }
+  ul.list.decimal, ol.list.decimal {
+    list-style-type: decimal; }
+
 .lowercase {
   text-transform: lowercase; }
 
@@ -2836,7 +2853,7 @@ hr {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-center, .button, a.button {
+.text-center, .button, a.button, .form-search button {
   text-align: center; }
 
 .text-left {
@@ -3069,10 +3086,11 @@ textarea {
   width: 100%;
   font-size: 0.8125rem;
   font-family: "PT Sans", sans-serif;
-  height: 34;
+  line-height: 2.125rem;
+  height: 2.125rem;
   border: 1px solid #bdbdbd;
   color: #212121;
-  padding: 0.375rem 0.625rem;
+  padding: 0 0.625rem;
   background: #fafafa; }
   input[type="text"]:hover,
   input[type="email"]:hover,
@@ -3656,3 +3674,38 @@ label {
     display: block !important; }
   .hide-screen-small-only {
     display: none !important; } }
+
+.form-search {
+  position: relative; }
+  .form-search input:focus + button {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    color: #e53935; }
+  .form-search button {
+    width: 2.125rem;
+    height: 2.125rem;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .form-search button.search {
+      color: #424242;
+      background: transparent;
+      border: 0 none; }
+      .form-search button.search:hover, .form-search button.search:focus, .form-search button.search.hover {
+        background: transparent;
+        color: #e53935;
+        border: 0 none; }
+      .form-search button.search:active, .form-search button.search.active {
+        -webkit-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: inset inset 0 1px 2px rgba(0, 0, 0, 0.2); }
+    .form-search button .fa {
+      font-size: 0.875rem; }
+    .form-search button:hover {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }

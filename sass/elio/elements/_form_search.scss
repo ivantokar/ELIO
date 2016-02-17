@@ -1,0 +1,38 @@
+.form-search {
+	position: relative;
+
+	input {
+		@if $form-search-size != default {
+			@extend .#{$form-search-size};
+		}
+
+		&:focus {
+			+ button {
+				@include transform(90deg);
+				color: $form-search-button-text-color-hover;
+			}
+		}
+	}
+	
+	button {
+		@extend .text-center;
+		@include button-color('search', $form-search-button-text-color, transparent, $form-search-button-text-color-hover, transparent);
+		
+		width: rem($form-search-button-icon-width);
+		height: rem($form-search-button-icon-height);
+		padding: 0;
+		position: absolute;
+		top: 0; 
+		#{to()}: 0;
+
+		.fa {
+			font-size: rem($form-search-button-icon-size);
+		}
+
+		&:hover {
+			@include box-shadow(none);
+		}
+
+	}
+
+}

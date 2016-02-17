@@ -160,6 +160,14 @@
 	transition: $arguments;
 }
 
+@mixin transform($arguments, $function: rotate) {
+	-moz-transform: #{$function}+($arguments);
+	-ms-transform: #{$function}+($arguments);
+	-webkit-transform: #{$function}+($arguments);
+	-o-transform: #{$function}+($arguments);
+	transform: #{$function}+($arguments);
+}
+
 @mixin opacity($opacity) {
 	opacity: $opacity;
 	filter: alpha(opacity=($opacity * 100));

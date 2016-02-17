@@ -104,6 +104,12 @@ $italic-font-family:						'PT Serif', serif;
 // line
 $hr-weight:									1;
 $hr-color:									color(grey, 300);
+// list
+$list-margin:								5% 0 5% 10%;
+$list-font-size:							14;
+$list-font-family:							$base-font-family;
+$list-text-color:							color(grey, 800);
+$list-item-margin-bottom:					10;
 
 // FORMS
 $input-font-family:							$base-font-family;
@@ -112,7 +118,7 @@ $input-border-radius:						0;
 $input-transition:							all 0.2s ease;
 $input-height:								34;
 $input-text-color:							color(grey, 900);
-$input-paddings:							rem(6) rem(10);
+$input-paddings:							0 rem(10);
 $input-border:								1px solid color(grey, 400);
 $input-border-hover:						color(grey, 500);
 $input-border-focus:						color(grey, 600);
@@ -225,8 +231,7 @@ $huge-button-height:						44;
 $huge-button-paddings:						0 rem(20);
 $huge-button-font-size:						18;
 
-
-// simply comment those elements that do not need to be compiled
+// CORE
 @import 'elio/reset';
 @import 'elio/base';
 @import 'elio/grid';
@@ -234,3 +239,14 @@ $huge-button-font-size:						18;
 @import 'elio/forms';
 @import 'elio/buttons';
 @import 'elio/utilities';
+
+// ELEMENTS VARIABLES
+$form-search-size:							default;
+$form-search-button-icon-size:				14;
+$form-search-button-icon-height:			34;
+$form-search-button-icon-width:				34;
+$form-search-button-text-color:				color(grey, 800);	
+$form-search-button-text-color-hover:		color(red, 600);
+
+// ELEMENTS
+@import 'elio/elements/form_search';
