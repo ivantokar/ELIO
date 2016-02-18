@@ -409,7 +409,8 @@
 		height: #{$height}px;
 		height: rem($height);
 		vertical-align: top;
-
+		line-height: rem($height);
+		
 		.fa {
 			font-size: rem(14);
 			line-height: rem($height);

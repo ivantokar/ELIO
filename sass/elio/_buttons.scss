@@ -8,7 +8,7 @@
 	font-family: $default-button-font-family;
 	font-size: rem($default-button-font-size);
 	font-weight: $default-button-font-weight;
-	line-height: 100%;
+	line-height: rem($default-button-height);
 	padding: $default-button-paddings;
 	height: rem($default-button-height);
 	margin-bottom: 0;

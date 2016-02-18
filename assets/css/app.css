@@ -3263,7 +3263,7 @@ label {
   font-family: "PT Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
-  line-height: 100%;
+  line-height: 2.125rem;
   padding: 0 1.25rem;
   height: 2.125rem;
   margin-bottom: 0;
@@ -3315,7 +3315,8 @@ label {
     padding: 0 0.625rem;
     height: 24px;
     height: 1.5rem;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 1.5rem; }
     .button.tiny .fa, a.button.tiny .fa {
       font-size: 0.875rem;
       line-height: 1.5rem; }
@@ -3326,7 +3327,8 @@ label {
     padding: 0 1.25rem;
     height: 28px;
     height: 1.75rem;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 1.75rem; }
     .button.small .fa, .button.form-caption-over .fa,
     .button.form-caption-under .fa, a.button.small .fa, a.button.form-caption-over .fa,
     a.button.form-caption-under .fa {
@@ -3337,7 +3339,8 @@ label {
     padding: 0 1.25rem;
     height: 40px;
     height: 2.5rem;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 2.5rem; }
     .button.large .fa, a.button.large .fa {
       font-size: 0.875rem;
       line-height: 2.5rem; }
@@ -3346,7 +3349,8 @@ label {
     padding: 0 1.25rem;
     height: 44px;
     height: 2.75rem;
-    vertical-align: top; }
+    vertical-align: top;
+    line-height: 2.75rem; }
     .button.huge .fa, a.button.huge .fa {
       font-size: 0.875rem;
       line-height: 2.75rem; }
