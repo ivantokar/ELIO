@@ -1,7 +1,7 @@
 .form-search {
 	position: relative;
 
-	input {
+	> input[type="text"] {
 		@if $form-search-size != default {
 			@extend .#{$form-search-size};
 		}

@@ -372,7 +372,7 @@
 @mixin input-size($parent, $height, $paddings, $font-size) {
 	&.#{$parent} {
 		font-size: rem($font-size);
-		height: $height;
+		height: rem($height);
 		padding: $paddings;
 	}
 }
