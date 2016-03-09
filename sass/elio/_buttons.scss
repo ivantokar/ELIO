@@ -4,7 +4,8 @@
 	@include box-shadow($buttons-box-shadow);
 	@include transition($buttons-transition);
 	@include border-radius($buttons-border-radius);
-	
+	@include box-sizing(border-box);
+
 	font-family: $default-button-font-family;
 	font-size: rem($default-button-font-size);
 	font-weight: $default-button-font-weight;
@@ -21,7 +22,7 @@
 	text-decoration: none;
 	border: $default-button-border;
 	outline: none;
-
+	
 	&:hover,
 	&:focus,
 	&.hover {

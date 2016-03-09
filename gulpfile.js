@@ -10,9 +10,9 @@ var gulp = require('gulp'),
 
 gulp.task('watcher', ['jade', 'styles', 'scripts'], function() {
 	livereload.listen();
-	gulp.watch('sass/**/*.scss', ['styles']);
+	gulp.watch('sass/**/*.scss', ['styles', 'jade']);
+	gulp.watch('scripts/**/*.js', ['scripts', 'jade']);
 	gulp.watch('jade/**/*.jade', ['jade']);
-	gulp.watch('scripts/**/*.js', ['scripts']);
 });
 
 gulp.task('jade', function () {
@@ -31,8 +31,8 @@ gulp.task('styles', function () {
 		.pipe(concat('all.css'))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(minifycss())
-		.pipe(gulp.dest('./assets/css'))
-		.pipe(livereload());
+		.pipe(gulp.dest('./assets/css'));
+		// .pipe(livereload());
 });
 
 gulp.task('scripts', function() {
@@ -41,8 +41,8 @@ gulp.task('scripts', function() {
 		.pipe(gulp.dest('./assets/js/'))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
-		.pipe(gulp.dest('./assets/js/'))
-		.pipe(livereload());
+		.pipe(gulp.dest('./assets/js/'));
+		// .pipe(livereload());
 });
 
 gulp.task('default', ['watcher']);

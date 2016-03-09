@@ -35,8 +35,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-button::-moz-focus-inner {
-  border: 0; }
+button::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+  padding: 0 !important;
+  border: 0 none !important; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -2745,7 +2749,7 @@ p {
   p.indent {
     text-indent: 5%; }
 
-h1.tiny, h2.tiny, h3.tiny, h4.tiny, h5.tiny, h6.tiny, p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny {
+h1.tiny, h2.tiny, h3.tiny, h4.tiny, h5.tiny, h6.tiny, p.tiny, div.tiny, span.tiny, a.tiny, b.tiny, strong.tiny, i.tiny, em.tiny, label.tiny {
   font-size: 0.6875rem; }
 
 h1.small, h1.form-caption-over,
@@ -2762,13 +2766,14 @@ a.form-caption-under, b.small, b.form-caption-over,
 b.form-caption-under, strong.small, strong.form-caption-over,
 strong.form-caption-under, i.small, i.form-caption-over,
 i.form-caption-under, em.small, em.form-caption-over,
-em.form-caption-under {
+em.form-caption-under, label.small, label.form-caption-over,
+label.form-caption-under {
   font-size: 0.75rem; }
 
-h1.large, h2.large, h3.large, h4.large, h5.large, h6.large, p.large, div.large, span.large, a.large, b.large, strong.large, i.large, em.large {
+h1.large, h2.large, h3.large, h4.large, h5.large, h6.large, p.large, div.large, span.large, a.large, b.large, strong.large, i.large, em.large, label.large {
   font-size: 1rem; }
 
-h1.huge, h2.huge, h3.huge, h4.huge, h5.huge, h6.huge, p.huge, div.huge, span.huge, a.huge, b.huge, strong.huge, i.huge, em.huge {
+h1.huge, h2.huge, h3.huge, h4.huge, h5.huge, h6.huge, p.huge, div.huge, span.huge, a.huge, b.huge, strong.huge, i.huge, em.huge, label.huge {
   font-size: 1.125rem; }
 
 h1.light, h1.form-caption-over,
@@ -2785,19 +2790,20 @@ a.form-caption-under, a.form-static, b.light, b.form-caption-over,
 b.form-caption-under, b.form-static, strong.light, strong.form-caption-over,
 strong.form-caption-under, strong.form-static, i.light, i.form-caption-over,
 i.form-caption-under, i.form-static, em.light, em.form-caption-over,
-em.form-caption-under, em.form-static {
+em.form-caption-under, em.form-static, label.light, label.form-caption-over,
+label.form-caption-under, label.form-static {
   color: #757575; }
 
-h1.red, h2.red, h3.red, h4.red, h5.red, h6.red, p.red, div.red, span.red, a.red, b.red, strong.red, i.red, em.red {
+h1.red, h2.red, h3.red, h4.red, h5.red, h6.red, p.red, div.red, span.red, a.red, b.red, strong.red, i.red, em.red, label.red {
   color: #e53935; }
 
-h1.green, h2.green, h3.green, h4.green, h5.green, h6.green, p.green, div.green, span.green, a.green, b.green, strong.green, i.green, em.green {
+h1.green, h2.green, h3.green, h4.green, h5.green, h6.green, p.green, div.green, span.green, a.green, b.green, strong.green, i.green, em.green, label.green {
   color: #388e3c; }
 
-h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, p.blue, div.blue, span.blue, a.blue, b.blue, strong.blue, i.blue, em.blue {
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, p.blue, div.blue, span.blue, a.blue, b.blue, strong.blue, i.blue, em.blue, label.blue {
   color: #1e88e5; }
 
-h1.orange, h2.orange, h3.orange, h4.orange, h5.orange, h6.orange, p.orange, div.orange, span.orange, a.orange, b.orange, strong.orange, i.orange, em.orange {
+h1.orange, h2.orange, h3.orange, h4.orange, h5.orange, h6.orange, p.orange, div.orange, span.orange, a.orange, b.orange, strong.orange, i.orange, em.orange, label.orange {
   color: #f57c00; }
 
 a, a:link, a:visited, a:active {
@@ -3221,18 +3227,22 @@ textarea {
 
 label {
   font-family: "PT Sans", sans-serif;
-  font-size: 0.875rem;
+  font-size: 1.0625rem;
+  font-weight: 300;
   max-width: 100%;
   padding: 0.3125rem 0;
   cursor: pointer; }
 
 .switch {
+  padding: 0.3125rem 0;
   margin-right: 1.25rem; }
   .switch input {
     margin-right: 0.625rem; }
   .switch label {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-family: "PT Sans", sans-serif;
+    font-weight: 300;
+    font-size: 0.9375rem;
+    line-height: 0rem;
     color: #424242; }
 
 .form-caption-over .fa,
@@ -3260,6 +3270,9 @@ label {
   -webkit-border-radius: 0.1875rem;
   border-radius: 0.1875rem;
   background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
@@ -3713,3 +3726,6 @@ label {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
+
+button {
+  padding: 6px; }
