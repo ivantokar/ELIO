@@ -152,8 +152,18 @@ $input-error-border-color:					color(red) !important;
 $input-error-text-color:					color(red);
 // form labels
 $label-font-family:							$base-font-family;
-$label-font-size:							14;
+$label-font-weight:							300;
+$label-font-size:							17;
 $label-paddings:							rem(5) 0;
+// switch (checkbox & radio)
+$switch-vertical-paddings:					5;
+$switch-margin-to:							$gaps * 2;
+$switch-input-margin-to:					$gaps;
+$switch-label-font-family:					$base-font-family;
+$switch-label-font-weight:					300;
+$switch-label-font-size: 					15;
+$switch-label-line-height:					0;
+$switch-label-text-color:					color(grey, 800);
 
 // BUTTONS
 $buttons-transition:						all 0.2s ease;

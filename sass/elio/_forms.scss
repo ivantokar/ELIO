@@ -78,6 +78,7 @@ label {
 	@extend .block;
 	font-family: $label-font-family;
 	font-size: rem($label-font-size);
+	font-weight: $label-font-weight;
 	max-width: 100%;
 	padding: $label-paddings;
 	cursor: pointer;
@@ -85,17 +86,20 @@ label {
 
 .switch {
 	@extend .inline-block;
-
-	margin-#{to()}: $gaps * 2;
+	
+	padding: rem($switch-vertical-paddings) 0;
+	margin-#{to()}: $switch-margin-to;
 	
 	input {
-		margin-#{to()}: $gaps;	
+		margin-#{to()}: $switch-input-margin-to;
 	}
 
 	label {
-		font-size: rem(14);
-		line-height: rem(18);
-		color: color(grey, 800);
+		font-family: $switch-label-font-family;
+		font-weight: $switch-label-font-weight;
+		font-size: rem($switch-label-font-size);
+		line-height: rem($switch-label-line-height);
+		color: $switch-label-text-color;
 	}
 }
 
