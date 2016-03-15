@@ -2,6 +2,14 @@
 @import 'elio/functions';
 @import 'elio/mixins';
 
+// BRAND COLOR
+$brand-color-stack:
+	(group: dark, color: #393e41),
+	(group: green, color: #44bba4),
+	(group: red, color: #e94f37),
+	(group: yellow, color: #ffd166),
+	(group: blue, color: #6184db);
+
 // BASE
 $base-direction:							ltr;
 $base-background:							color(white);

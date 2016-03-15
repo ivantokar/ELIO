@@ -231,6 +231,14 @@ $color-stack:
 	}
 }
 
+@function brand($group, $transparency:1) {
+	@each $brand in $brand-color-stack {
+		@if($group == map-get($brand, group)) {
+			@return rgba(map-get($brand, color), $transparency);
+		}
+	}
+}
+
 @function str-replace($string, $search, $replace: "") {
 	$index: str-index($string, $search);
 
