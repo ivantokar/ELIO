@@ -1,13 +1,13 @@
 {
   "name": "elio",
-  "description": "SASS/CSS Framework",
+  "description": "Sass Framework",
   "main": "",
   "authors": [
     "Ivan Tokar <ivan.yu.tokar@yandex.ru>"
   ],
   "license": "MIT",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/ivantokar/elio",
   "ignore": [
     "**/.*",
     "node_modules",
