@@ -123,8 +123,23 @@ label {
 }
 
 .form-static {
-	@extend .block;
-	@extend .light;
+	@extend .inline-block;
+	
+	line-height: rem($input-height);
+	
+	&.tiny {
+		line-height: rem($tiny-input-height);
+	}
 
-	padding-top: 6px;
+	&.small {
+		line-height: rem($small-input-height);
+	}
+
+	&.large {
+		line-height: rem($large-input-height);
+	}
+
+	&.huge {
+		line-height: rem($huge-input-height);
+	}
 }
