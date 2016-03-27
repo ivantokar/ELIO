@@ -152,6 +152,29 @@
 	background-clip: padding-box;
 }
 
+@mixin animation($delay, $duration:'', $animation:'') {
+	@if ($delay != '') {
+		-webkit-animation-delay: $delay;
+		-moz-animation-delay: $delay;
+		-o-animation-delay: $delay;
+		animation-delay: $delay;
+	} 
+
+	@if ($duration != '') {
+		-webkit-animation-duration: $duration;
+		-moz-animation-duration: $duration;
+		-o-animation-duration: $duration;
+		animation-duration: $duration;	
+	}
+
+	@if ($animation != '') {
+		-webkit-animation-name: $animation;
+		-moz-animation-name: $animation;
+		-o-animation-name: $animation;
+		animation-name: $animation;
+	}
+}
+
 @mixin transition($arguments: all 0.2s ease) {
 	-webkit-transition: $arguments;
 	-moz-transition: $arguments;
