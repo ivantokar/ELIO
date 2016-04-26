@@ -111,8 +111,8 @@
 
 @mixin border-radius($radius, $type: 0) {
 	@if $type == '%' {
-		-webkit-border-radius: #{$radius}%;
-		border-radius: #{$radius}%;
+		-webkit-border-radius: percent($radius);
+		border-radius: percent($radius);
 	} @else {
 		-webkit-border-radius: rem($radius);
 		border-radius: rem($radius);

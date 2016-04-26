@@ -8,6 +8,11 @@
     @return ($size / 16) * 1em;
 }
 
+// convert px to %
+@function percent($size) {
+    @return $size * 1%;
+}
+
 // directions
 @function from($dir: $base-direction) {
 	
