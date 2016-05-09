@@ -36,11 +36,15 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(['./scripts/app.js'])
+	return gulp.src([
+			'./bower_components/jquery/dist/jquery.min.js',
+			'./scripts/jquery.elio.pushmenu.js',
+			'./scripts/jquery.elio.accordion.js',
+			'./scripts/app.js'])
 		.pipe(concat('all.js'))
 		.pipe(gulp.dest('./assets/js/'))
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest('./assets/js/'));
 		// .pipe(livereload());
 });

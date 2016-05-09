@@ -1,0 +1,106 @@
+$pushmenu-background:						color(grey, 700) !default;
+$pushmenu-user-paddings:					20px !default;
+$pushmenu-list-header-height:				0;
+$pushmenu-list-font-family:					$base-font-sans !default;
+$pushmenu-list-font-style:					normal !default;
+$pushmenu-list-font-size:					13 !default;
+$pushmenu-list-paddings:					15px 30px !default;
+$pushmenu-list-separator:					1px solid darken($pushmenu-background, 10%) !default;
+$pushmenu-list-background:					transparent !default;
+$pushmenu-list-background-hover:			darken($pushmenu-background, 5%) !default;
+$pushmenu-list-color:						color(grey, 200) !default;
+$pushmenu-list-color-hover:					color(white) !default;
+$pushmenu-list-header-background:			darken($pushmenu-background, 10%) !default;
+
+body,
+.pushmenu {
+	@include transition(all 0.3s ease);
+}
+
+body {
+	overflow-x: hidden;
+	position: relative;
+	#{to()}: 0;
+
+	&.active {
+		#{to()}: rem(250);
+
+		@include mobile-small-below {
+			#{to()}: rem(200);
+		}
+	}
+}
+
+.pushmenu {
+	position: fixed;
+	background: $pushmenu-background;
+	width: rem(250);
+	#{to()}: rem(-250);
+	height: 100%;
+	top: 0;
+	z-index: 1010;
+	overflow: auto;
+	visibility: none;
+
+	@include mobile-small-below {
+		width: rem(200);
+		#{to()}: rem(-200);
+	}
+
+	&:before {
+		content: '';
+		height: 100%;
+		width: 10px;
+		position: absolute;
+		display: block;
+		#{from()}: 0;
+		top: 0;
+		
+		@if $base-direction == ltr {
+			@include box-shadow(inset 10px 0 3px -5px rgba(color(black), .1));
+		} @else {
+			@include box-shadow(inset -10px 0 3px -5px rgba(color(black), .1));
+		}
+	}
+
+	&.active
+	{
+		visibility: visible;
+		#{to()}: 0;
+	}
+	
+	li {
+		border-bottom: $pushmenu-list-separator;
+
+		&.active,
+		// for WP
+		&.current-menu-item {
+			color: $pushmenu-list-color-hover;
+			background: $pushmenu-list-background-hover;
+		}
+
+		a {
+			@extend .block;
+
+			font-size: rem($pushmenu-list-font-size);
+			text-decoration: none;
+			padding: $pushmenu-list-paddings;
+			background: $pushmenu-list-background;
+			color: $pushmenu-list-color;
+
+			&:hover,
+			&:active {
+				color: $pushmenu-list-color-hover;
+				background: $pushmenu-list-background-hover;
+			}
+		}
+	}
+
+	hr {
+		background: color(grey, 800);
+		height: 3px;
+		border: 0 none;
+	}
+}
+
+
