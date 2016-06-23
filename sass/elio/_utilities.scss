@@ -67,6 +67,23 @@
 	}
 }
 
+.flex-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		right: auto;
+		bottom: auto;
+		left: 0;
+		width: 100%;
+		height: 100%;		
+	}
+}
+
 .overlay {
 	cursor: pointer;
 	position: fixed;
@@ -83,6 +100,10 @@
 	&.light {
 		background: rgba(color(white), .5);
 	}
+}
+
+.relative {
+	position: relative;
 }
 
 .half {
@@ -297,4 +318,8 @@
 
 @include screen-small-only {
 	@include visibility('screen-small-only');
+}
+
+.icon-size {
+	font-size: rem(14);
 }

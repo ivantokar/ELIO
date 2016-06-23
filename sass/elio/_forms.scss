@@ -69,7 +69,8 @@ textarea {
 
 textarea {
 	@extend .block;
-	
+	padding: rem(10);
+	line-height: 1.4;
 	height: auto;
 	resize: none;
 }
@@ -90,8 +91,16 @@ label {
 	padding: rem($switch-vertical-paddings) 0;
 	margin-#{to()}: $switch-margin-to;
 	
-	input {
+	input, div[class^="icheckbox"] {
 		margin-#{to()}: $switch-input-margin-to;
+	}
+	
+	div[class^="icheckbox"] {
+		vertical-align: bottom;
+		+span {
+			@extend .inline-block;
+			line-height: rem(20);
+		}
 	}
 
 	label {
@@ -100,6 +109,11 @@ label {
 		font-size: rem($switch-label-font-size);
 		line-height: rem($switch-label-line-height);
 		color: $switch-label-text-color;
+	}
+
+	&.half {
+		@extend .left;
+		margin: 0;	
 	}
 }
 

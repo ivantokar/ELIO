@@ -1,0 +1,130 @@
+$dropdown-width:							rem(280) !default;
+$dropdown-background:						color(white) !default;
+$dropdown-border:							0 none !default;
+$dropdown-arrow-border-color:				color(grey, 300) !default;
+$dropdown-border-radius:					$base-border-radius !default;
+$dropdown-separator:						rem(1) solid color(grey, 200) !default;
+$dropdown-box-shadow:						0 0 rem(15) color(grey, 900, .2) !default;
+$dropdown-link-background-hover:			color(grey, 50) !default;
+$dropdown-btn-section-background:			color(grey, 200) !default;
+$dropdown-btn-section-border:				1px solid color(grey, 400) !default;
+$dropdown-btn-section-paddings:				10px !default;
+
+.dropdown {
+	@extend .clearfix;
+	@include border-radius($dropdown-border-radius);
+	@include box-shadow($dropdown-box-shadow);
+
+	display: none;
+	position: absolute;
+	z-index: 1010;
+	width: $dropdown-width;
+	background: color(white);
+	
+	@include mobile-small-below {
+		position: fixed;
+		left: 0;
+		right: 0;
+	}
+
+	.arrow {
+		position: absolute;
+		top: -10px;
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid $dropdown-arrow-border-color;
+
+		.inner {
+			position: absolute;
+			z-index: 1;
+			left: -9px;
+			top: 1px;
+			border-left: 9px solid transparent;
+			border-right: 9px solid transparent;
+			border-bottom: 9px solid color(white);
+		}
+
+		@include mobile-small-below {
+			display: none;
+		}
+
+	}
+
+	ul {
+		border: $dropdown-border;
+		background: $dropdown-background;
+		overflow: hidden;
+		
+		@include border-radius($dropdown-border-radius);
+	}
+
+	li {
+		border-bottom: $dropdown-separator;
+
+		> a {
+			@extend .block;
+			@extend .text-left;
+			
+			font-size: rem(12);
+			font-weight: 400;
+			line-height: rem(40);
+			padding: 0 20px;
+			color: color(grey, 800);
+			text-decoration: none;
+
+			.fa {
+				@extend .inline-block;
+				@extend .text-left;
+				font-size: rem(14);
+
+				width: $gaps * 2;
+				margin-#{to()}: $gaps;
+				color: color(grey, 700);
+				line-height: rem(40);
+			}
+
+			&:hover {
+				background: $dropdown-link-background-hover;
+				color: $link-color-hover;
+
+				.fa {
+					color: $link-color-hover;
+				}
+			}
+
+			&.logout {
+				&:hover {
+					color: color(red, 400);
+
+					.fa {
+						color: color(red, 400);
+					}
+				}
+			}
+		}
+		
+		&:last-child {
+			border-bottom: 0 none;
+		}
+
+		span {
+			margin-top: -1px;
+			display: block;
+			border-top: $dropdown-btn-section-border;
+			background: $dropdown-btn-section-background;
+			padding: $dropdown-btn-section-paddings;
+
+			@extend .clearfix;
+		}
+	}
+	
+	@include tablet-below {
+
+		li > a {
+			font-size: rem(14);
+			padding: 10px 20px;
+		}
+	}
+}

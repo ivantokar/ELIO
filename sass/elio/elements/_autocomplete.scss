@@ -1,0 +1,63 @@
+.autocomplete {
+	@include box-shadow(0 0 rem(15) color(grey, 900, .3));
+	
+	display: none;
+	background: color(white);
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 1;
+	min-height: rem(34);
+
+	li {
+		&:not(:first-child) {
+			border-top: rem(1) solid color(grey, 300);
+		}
+
+		a {
+			@extend .block;
+			@extend .relative;
+
+			padding: rem(5) $gaps;
+			cursor: pointer;
+			text-decoration: none;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				margin: rem(-1) 0;
+				background: rgba(brand(green), .6);
+				border-top: rem(1) solid brand(green);
+				border-bottom: rem(1) solid brand(green);
+
+				span {
+					background: none;
+				}
+
+				.fa {
+					color: darken(brand(green), 10);
+				}
+			}
+
+			span {
+				@extend .bold;
+				@include border-radius(2);
+				
+				font-size: rem(12);
+				line-height: rem(24);
+				color: color(grey, 800);
+				background: rgba(brand(green), .5);
+				padding: rem(2) rem(10);
+			}
+
+			.fa {
+				@extend .inline;
+				@extend .right;
+
+				color: color(white);
+				line-height: rem(28);
+				font-size: rem(14);
+			}
+		}
+	}
+}

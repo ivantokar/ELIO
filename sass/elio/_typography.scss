@@ -1,3 +1,8 @@
+.fa {
+	font-size: rem(14);
+	// line-height: rem(14);
+}
+
 h1 {
 	@include vr($h1-font-size, $h1-vr-line-height);
 	@include vr-margin-bottom($h1-vr-margin-bottom);
@@ -117,6 +122,31 @@ a {
 		color: $link-color-hover;
 		text-decoration: $link-decoration-hover;
 	}
+
+	&.smooth {
+		@include transition;
+	}
+
+	// colors
+	&.light {
+		color: $light-text-color;
+	}
+
+	&.red {
+		color: $red-text-color;
+	}
+
+	&.green {
+		color: $green-text-color;
+	}
+
+	&.blue {
+		color: $blue-text-color;
+	}
+
+	&.orange {
+		color: $orange-text-color;
+	}
 }
 
 i, em, .italic {
@@ -126,6 +156,14 @@ i, em, .italic {
 
 b, strong, .bold {
 	font-weight: bold;
+}
+
+.semibold {
+	font-weight: 600;
+}
+
+.thin {
+	font-weight: 200;
 }
 
 u, .underline {
@@ -160,6 +198,10 @@ ul.list, ol.list {
 
 	&.decimal {
 		list-style-type: decimal;
+	}
+
+	&.none {
+		list-style-type: none;
 	}
 }
 

@@ -68,8 +68,8 @@
 
 @include screen-large {
 	@include grid('screen-large');
-	@include pull('screen-large');
 	@include push('screen-large');
+	@include pull('screen-large');
 	@include offset('screen-large');
 	@include glue('screen-large-only');
 	@include fixed('screen-large');

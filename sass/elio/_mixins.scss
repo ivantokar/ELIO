@@ -98,6 +98,10 @@
 		display: block !important;
 	}
 
+	.show-inline-#{$parent} {
+		display: inline !important;
+	}
+
 	.hide-#{$parent} {
 		display: none !important;
 	}
@@ -361,7 +365,7 @@
 				}
 
 				.#{$screen}-pull-#{$j} {
-					#{from()}: $j * (100% / $i);
+					#{to()}: $j * (100% / $i);
 				}
 
 				.#{$screen}-push-#{$j} {
@@ -459,5 +463,15 @@
 		&.active {
 			@include box-shadow(inset $buttons-box-shadow-active);
 		}
+	}
+}
+
+@mixin alerts($background, $border, $color, $icon-color) {
+	background: $background;
+	border: $border;
+	color: $color;
+
+	.fa {
+		color: $icon-color
 	}
 }

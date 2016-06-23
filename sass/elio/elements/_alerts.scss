@@ -1,0 +1,66 @@
+$alerts-border-radius:				2 !default;
+$alerts-font-size:					13 !default;
+$alerts-paddings:					rem(10) rem(20) !default;
+$alerts-padding-from:				25 !default;
+$alerts-icon-font-size:				18 !default;
+
+$alerts-success-background:			color(green, 100) !default;
+$alerts-success-border:				0 none !default;
+$alerts-success-color:				color(green, 800) !default;
+$alerts-success-icon-color:			color(green, 800) !default;
+
+$alerts-info-background:			color(blue, 100) !default;
+$alerts-info-border:				rem(1) solid color(blue, 400) !default;
+$alerts-info-color:					color(blue, 400) !default;
+$alerts-info-icon-color:			color(blue, 400) !default;
+
+$alerts-warning-background:			color(orange, 100) !default;
+$alerts-warning-border:				rem(1) solid color(orange, 400) !default;
+$alerts-warning-color:				color(orange, 400) !default;
+$alerts-warning-icon-color:			color(orange, 400) !default;
+
+$alerts-danger-background:			color(red, 100) !default;
+$alerts-danger-border:				0 none !default;
+$alerts-danger-color:				color(red, 600) !default;
+$alerts-danger-icon-color:			color(red, 600) !default;
+
+
+.alert {
+	@extend .push-down-once;
+	@include border-radius($alerts-border-radius);
+	font-size: rem($alerts-font-size);
+
+	position: relative;
+	padding: $alerts-paddings;
+
+	span {
+		display: block;
+		line-height: rem(22);
+		padding-#{from()}: rem($alerts-padding-from);
+	}
+
+	.fa {
+		font-size: rem($alerts-icon-font-size);
+		position: absolute;
+		top: rem(22);
+		left: rem(14);
+		line-height: 0;
+	}
+
+	&.alert-success {
+		@include alerts($alerts-success-background, $alerts-success-border, $alerts-success-color, $alerts-success-icon-color);
+	}
+
+	&.alert-info {
+		@include alerts($alerts-info-background, $alerts-info-border, $alerts-info-color, $alerts-info-icon-color);
+	}
+
+	&.alert-warning {
+		@include alerts($alerts-warning-background, $alerts-warning-border, $alerts-warning-color, $alerts-warning-icon-color);
+	}
+
+	&.alert-danger {
+		@include alerts($alerts-danger-background, $alerts-danger-border, $alerts-danger-color, $alerts-danger-icon-color);
+	}
+}
+

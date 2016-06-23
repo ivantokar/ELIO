@@ -1,0 +1,56 @@
+.modal {
+	@include box-shadow(0 0 rem(15) color(grey, 900, .8));
+
+	position: absolute;
+	right: 2%;
+	left: 2%;
+	width: 96%;
+	z-index: 1010;
+	background: color(white);
+	display: none;
+	overflow: hidden;
+
+	@include tablet {
+		width: rem(400);
+		right: 50%;
+		left: auto;
+		margin-right: rem(-200);
+	}
+
+	.modal-container {
+		@extend .relative;
+		@extend .compact-up-once;
+		@extend .compact-down-once;
+	}
+
+	.modal-close {
+		@extend .block;
+		@extend .text-center;
+
+		position: absolute;
+		z-index: 1;
+		top: rem(10);
+		right: rem(10);
+		width: rem(25);
+		height: rem(25);
+		cursor: pointer;
+
+		&.filled {
+			@extend .filled;
+		}
+
+		svg {
+			@include transition;
+			fill: color(grey, 400);
+
+			&:hover {
+				fill: color(grey, 800);
+			}
+		}
+	}
+
+	.modal-scrolling {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}

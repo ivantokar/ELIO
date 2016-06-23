@@ -1,0 +1,48 @@
+.form-labeled {
+	@extend .relative;
+	
+	> input {
+		padding-left: rem(42);
+	}
+
+	.sign {
+		@extend .text-center;
+		@include box-shadow(rem(1) 0 rem(2) color(grey, 900, .1));
+		
+		position: absolute;
+		top: rem(1);
+		left: rem(1);
+		color: color(grey, 700);
+		line-height: rem($input-height - 4);
+		height: rem($input-height - 2);
+		background: color(white);
+		width: rem(32);
+	}
+}
+
+.form-action {
+	@extend .relative;
+	
+	width: 100%;
+	display: table;
+	border-collapse: separate;
+	
+	div {
+		@extend .clearfix;
+		@extend .relative;
+		display: table-cell;
+		
+		&:last-child {
+			width: 1%;
+		}
+
+		.button {
+			@include border-radius(0);
+			@include border-right-radius(4);
+		}
+
+		input {
+			border-#{to()}: 0 none;
+		}
+	}
+}

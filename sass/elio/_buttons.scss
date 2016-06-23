@@ -13,7 +13,7 @@
 	padding: $default-button-paddings;
 	height: rem($default-button-height);
 	margin-bottom: 0;
-	vertical-align: middle;
+	// vertical-align: middle;
 	cursor: pointer;
 	background-image: none;
 	background-color: $default-button-background;
@@ -47,8 +47,8 @@
 		@include box-shadow(none);
 		@include opacity(.7);
 
-		color: $buttons-disable-text-color;
-		background: $buttons-disable-background;
+		color: $buttons-disable-text-color !important;
+		background: $buttons-disable-background !important;
 		cursor: not-allowed;
 	}
 
@@ -60,7 +60,7 @@
 		padding-#{from()}: 7px;
 	}
 
-	&.ltr {
+	&.icon-to {
 		span {
 			padding-#{from()}: 0;
 			padding-#{to()}: 7px;
@@ -71,7 +71,7 @@
 		font-size: rem(14);
 		line-height: rem($default-button-height);
 	}
-
+	
 	&.icon-only {
 		width: 40px;
 
