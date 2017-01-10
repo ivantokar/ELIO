@@ -72,25 +72,29 @@ p {
 	}
 }
 
-h1, h2, h3, h4, h5, h6, p, div, span, a, b, strong, i, em, label {
+h1, h2, h3, h4, h5, h6, p, div, span, a, b, strong, i, em, label, ul.list, li {
 	// sizes
 	&.tiny {
-		font-size: rem($tiny-text-font-size);	
+		font-size: rem($tiny-text-font-size);
 	}
 
 	&.small {
-		font-size: rem($small-text-font-size);	
+		font-size: rem($small-text-font-size);
 	}
 
 	&.large {
-		font-size: rem($large-text-font-size);	
+		font-size: rem($large-text-font-size);
 	}
 
 	&.huge {
-		font-size: rem($huge-text-font-size);	
+		font-size: rem($huge-text-font-size);
 	}
-	
+
 	// colors
+	&.black {
+		color: $base-text-color;
+	}
+
 	&.light {
 		color: $light-text-color;
 	}
@@ -162,6 +166,10 @@ b, strong, .bold {
 	font-weight: 600;
 }
 
+.normal {
+	font-weight: 400;
+}
+
 .thin {
 	font-weight: 200;
 }
@@ -180,7 +188,7 @@ hr {
 ul.list, ol.list {
 	font-size: rem($list-font-size);
 	font-family: $list-font-family;
-	color: $list-text-color;
+	color: $base-text-color;
 	margin: $list-margin;
 	list-style-type: disc;
 
@@ -295,4 +303,4 @@ ul.list, ol.list {
 
 @include screen-small-only {
 	@include visibility('screen-small-only');
-}	
+}

@@ -45,7 +45,7 @@
 		word-break: break-all;
 	-webkit-hyphens: auto;
 	   -moz-hyphens: auto;
-			hyphens: auto;	
+			hyphens: auto;
 }
 
 @mixin vr($font-size: $base-font-size, $line-height: 1) {
@@ -65,7 +65,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	.left-#{$parent} {
 		float: from() !important;
 	}
@@ -162,13 +162,13 @@
 		-moz-animation-delay: $delay;
 		-o-animation-delay: $delay;
 		animation-delay: $delay;
-	} 
+	}
 
 	@if ($duration != '') {
 		-webkit-animation-duration: $duration;
 		-moz-animation-duration: $duration;
 		-o-animation-duration: $duration;
-		animation-duration: $duration;	
+		animation-duration: $duration;
 	}
 
 	@if ($animation != '') {
@@ -375,14 +375,14 @@
 				.#{$screen}-offset-#{$j} {
 					margin-#{from()}: $j * (100% / $i);
 				}
-			}			
+			}
 		}
 		$i: $i - 1;
 	}
 }
 // FORMS
 @mixin input-color($parent, $background, $border-color, $text-color) {
-	@if ($parent != noparent) {	
+	@if ($parent != noparent) {
 		&.#{$parent} {
 			border-color: $border-color;
 			background: $background;
@@ -429,15 +429,19 @@
 // }
 
 // BUTTONS
-@mixin button-size($parent, $height, $paddings, $font-size) {
+@mixin button-size($parent, $height, $paddings, $font-size, $borderSize: 0) {
 	&.#{$parent} {
 		font-size: rem($font-size);
 		padding: $paddings;
 		height: #{$height}px;
 		height: rem($height);
 		vertical-align: top;
-		line-height: rem($height);
-		
+		@if $borderSize > 0 {
+			line-height: rem($height - ($borderSize * 2));
+		} @else {
+			line-height: rem($height);
+		}
+
 		.fa {
 			font-size: rem(14);
 			line-height: rem($height);

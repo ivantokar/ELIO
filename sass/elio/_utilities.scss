@@ -92,7 +92,25 @@
 	z-index: 1000;
 	top: 0;
 	right: 0;
+	
+	&.dark {
+		background: rgba(color(black), .5);
+	}
 
+	&.light {
+		background: rgba(color(white), .5);
+	}
+}
+
+.over-overlay {
+	cursor: pointer;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1020;
+	top: 0;
+	right: 0;
+	
 	&.dark {
 		background: rgba(color(black), .5);
 	}

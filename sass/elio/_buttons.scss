@@ -21,6 +21,7 @@
 	white-space: nowrap;
 	text-decoration: none;
 	border: $default-button-border;
+	-webkit-appearance: none;
 	outline: none;
 	
 	&:hover,
@@ -87,6 +88,7 @@
 	@include button-size('huge', $huge-button-height, $huge-button-paddings, $huge-button-font-size);
 	
 	// colors
+	@include button-color('white', $white-button-text-color, $white-button-background, $white-button-text-color-hover, $white-button-background-hover, $white-button-border, $white-button-border-hover);
 	@include button-color('light', $light-button-text-color, $light-button-background, $light-button-text-color-hover, $light-button-background-hover, $light-button-border, $light-button-border-hover);
 	@include button-color('red', $red-button-text-color, $red-button-background, $red-button-text-color-hover, $red-button-background-hover);
 	@include button-color('green', $green-button-text-color, $green-button-background, $green-button-text-color-hover, $green-button-background-hover, $green-button-border, $green-button-border-hover);

@@ -23,7 +23,7 @@
 		@extend .compact-down-once;
 	}
 
-	.modal-close {
+	.modal-close, .modal-close-over {
 		@extend .block;
 		@extend .text-center;
 
@@ -52,5 +52,14 @@
 	.modal-scrolling {
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+
+	.modal-message {
+		@extend .semibold;
+		@extend .text-center;
+		@extend .compact-up-twice;
+		@extend .compact-down-twice;
+
+		font-size: rem(16);
 	}
 }

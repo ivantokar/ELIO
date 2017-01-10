@@ -196,6 +196,14 @@ $default-button-paddings:					0 rem(20);
 $default-button-border:						0 none;
 $default-button-border-hover:				0 none;
 // BUTTON COLORS
+
+// white button
+$white-button-text-color:					brand(blue);
+$white-button-background:					color(white);
+$white-button-text-color-hover:				darken(brand(blue), 10);
+$white-button-background-hover:				color(white);
+$white-button-border:						0 none;
+$white-button-border-hover:					0 none;
 // light button
 $light-button-text-color:					color(grey, 700);
 $light-button-background:					color(grey, 50);
@@ -259,7 +267,7 @@ $huge-button-font-size:						18;
 @import 'elio/utilities';
 
 // ELEMENTS
-// @import 'elio/elements/form_search';
+@import 'elio/elements/form_search';
 @import 'elio/elements/form_labeled';
 @import 'elio/elements/autocomplete';
 @import 'elio/elements/pushmenu';
@@ -267,4 +275,3 @@ $huge-button-font-size:						18;
 @import 'elio/elements/modal';
 @import 'elio/elements/dropdown';
 @import 'elio/elements/scopebar';
-
