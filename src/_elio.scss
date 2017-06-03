@@ -1,24 +1,22 @@
-@import 'elio/global';
-@import 'elio/functions';
-@import 'elio/mixins';
+@import 'core/global';
+@import 'core/functions';
+@import 'core/mixins';
 
 // BRAND COLOR
 $brand-color-stack:
-	(group: dark, color: #393e41),
-	(group: green, color: #44bba4),
-	(group: red, color: #e94f37),
-	(group: yellow, color: #ffd166),
-	(group: blue, color: #6184db);
+	(group: primary, color: #448AFF),
+	(group: secondary, color: #69F0AE),
+	(group: tertiary, color: #FF5252);
 
 // BASE
 $base-direction:							ltr;
 $base-background:							color(white);
 $base-text-color:							color(grey, 900);
 $base-font-style:							normal;	
-$base-font-mono:							'PT Mono', monospace;
-$base-font-sans:							'PT Sans', sans-serif;
-$base-font-serif:							'PT Serif', serif;
-$base-font-narrow:							'PT Sans Narrow', sans-serif;
+$base-font-mono:							monospace;
+$base-font-sans:							sans-serif;
+$base-font-serif:							serif;
+$base-font-narrow:							sans-serif;
 $base-font-family:							$base-font-sans;
 $base-font-size:							13; // px
 $base-line-height:							24; // px
@@ -198,9 +196,9 @@ $default-button-border-hover:				0 none;
 // BUTTON COLORS
 
 // white button
-$white-button-text-color:					brand(blue);
+$white-button-text-color:					color(blue);
 $white-button-background:					color(white);
-$white-button-text-color-hover:				darken(brand(blue), 10);
+$white-button-text-color-hover:				color(blue, 600);
 $white-button-background-hover:				color(white);
 $white-button-border:						0 none;
 $white-button-border-hover:					0 none;
@@ -258,20 +256,20 @@ $huge-button-paddings:						0 rem(20);
 $huge-button-font-size:						18;
 
 // CORE
-@import 'elio/reset';
-@import 'elio/base';
-@import 'elio/grid';
-@import 'elio/typography';
-@import 'elio/forms';
-@import 'elio/buttons';
-@import 'elio/utilities';
+@import 'core/reset';
+@import 'core/base';
+@import 'core/grid';
+@import 'core/typography';
+@import 'core/forms';
+@import 'core/buttons';
+@import 'core/utilities';
 
 // ELEMENTS
-@import 'elio/elements/form_search';
-@import 'elio/elements/form_labeled';
-@import 'elio/elements/autocomplete';
-@import 'elio/elements/pushmenu';
-@import 'elio/elements/alerts';
-@import 'elio/elements/modal';
-@import 'elio/elements/dropdown';
-@import 'elio/elements/scopebar';
+//@import 'elements/form_search';
+//@import 'elements/form_labeled';
+//@import 'elements/autocomplete';
+//@import 'elements/pushmenu';
+//@import 'elements/alerts';
+//@import 'elements/modal';
+//@import 'elements/dropdown';
+//@import 'elements/scopebar';
